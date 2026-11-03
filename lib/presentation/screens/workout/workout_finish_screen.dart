@@ -14,6 +14,7 @@ class WorkoutFinishScreen extends ConsumerStatefulWidget {
   final double? runDistanceKm;
   final int? runDurationSeconds;
   final int? avgPaceSeconds;
+  final String? routeJson;
 
   const WorkoutFinishScreen({
     super.key,
@@ -22,6 +23,7 @@ class WorkoutFinishScreen extends ConsumerStatefulWidget {
     this.runDistanceKm,
     this.runDurationSeconds,
     this.avgPaceSeconds,
+    this.routeJson,
   });
 
   @override
@@ -58,6 +60,7 @@ class _WorkoutFinishScreenState extends ConsumerState<WorkoutFinishScreen> {
       runDistanceKm: widget.runDistanceKm,
       runDurationSeconds: widget.runDurationSeconds,
       avgPaceSeconds: widget.avgPaceSeconds,
+      routeJson: widget.routeJson,
       sets: updatedSets,
     );
 
@@ -138,6 +141,20 @@ class _WorkoutFinishScreenState extends ConsumerState<WorkoutFinishScreen> {
                           ),
                         ],
                       ),
+                      if (widget.routeJson != null) ...[
+                        const SizedBox(height: 12),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.location_on, size: 16, color: AppColors.statusDone),
+                            const SizedBox(width: 4),
+                            Text(
+                              'GPS Route Recorded',
+                              style: theme.textTheme.labelSmall?.copyWith(color: AppColors.statusDone),
+                            ),
+                          ],
+                        ),
+                      ],
                     ] else ...[
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -245,11 +262,9 @@ class _WorkoutFinishScreenState extends ConsumerState<WorkoutFinishScreen> {
       case 6:
         return 'Moderate';
       case 7:
-        return 'Comfortably Hard';
       case 8:
-        return 'Hard';
+        return 'Comfortably Hard';
       case 9:
-        return 'Very Hard';
       case 10:
         return 'Maximum Effort';
       default:
@@ -257,4 +272,3 @@ class _WorkoutFinishScreenState extends ConsumerState<WorkoutFinishScreen> {
     }
   }
 }
-

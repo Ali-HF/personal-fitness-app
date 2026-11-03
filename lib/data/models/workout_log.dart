@@ -8,6 +8,7 @@ class WorkoutLog {
   final double? runDistanceKm;
   final int? runDurationSeconds;
   final int? avgPaceSeconds;
+  final String? routeJson;
   final List<SetLog> sets;
   final DateTime createdAt;
 
@@ -21,6 +22,7 @@ class WorkoutLog {
     this.runDistanceKm,
     this.runDurationSeconds,
     this.avgPaceSeconds,
+    this.routeJson,
     this.sets = const [],
     DateTime? createdAt,
   }) : createdAt = createdAt ?? DateTime.now();
@@ -36,6 +38,7 @@ class WorkoutLog {
       'run_distance_km': runDistanceKm,
       'run_duration_seconds': runDurationSeconds,
       'avg_pace_seconds': avgPaceSeconds,
+      'route_json': routeJson,
       'created_at': createdAt.toIso8601String(),
     };
   }
@@ -51,6 +54,7 @@ class WorkoutLog {
       runDistanceKm: (map['run_distance_km'] as num?)?.toDouble(),
       runDurationSeconds: map['run_duration_seconds'] as int?,
       avgPaceSeconds: map['avg_pace_seconds'] as int?,
+      routeJson: map['route_json'] as String?,
       sets: sets,
       createdAt: DateTime.tryParse(map['created_at'] as String? ?? '') ?? DateTime.now(),
     );
@@ -138,4 +142,3 @@ class SetLog {
     );
   }
 }
-

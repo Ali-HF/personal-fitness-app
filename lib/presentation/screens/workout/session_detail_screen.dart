@@ -7,6 +7,7 @@ import '../../../data/models/exercise.dart';
 import 'exercise_swap_modal.dart';
 import 'active_strength_screen.dart';
 import 'log_run_screen.dart';
+import 'live_run_screen.dart';
 
 class SessionDetailScreen extends StatefulWidget {
   final PlannedSession session;
@@ -148,29 +149,72 @@ class _SessionDetailScreenState extends State<SessionDetailScreen> {
             // Bottom Start / Log Button
             Padding(
               padding: const EdgeInsets.all(16),
-              child: ElevatedButton(
-                onPressed: () {
-                  if (isRun) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => LogRunScreen(session: widget.session),
-                      ),
-                    );
-                  } else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => ActiveStrengthScreen(
-                          session: widget.session,
-                          customNames: _customExerciseNames,
+              child: isRun
+                  ? Row(
+                      children: [
+                        Expanded(
+                          child: OutlinedButton(
+                            style: OutlinedButton.styleFrom(
+                              minimumSize: const Size.fromHeight(56),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => LogRunScreen(session: widget.session),
+                                ),
+                              );
+                            },
+                            child: const Text('Manual Log'),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          flex: 2,
+                          child: ElevatedButton.icon(
+                            style: ElevatedButton.styleFrom(
+                              minimumSize: const Size.fromHeight(56),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            icon: const Icon(PhosphorIconsBold.personSimpleRun),
+                            label: const Text('Live GPS Run'),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => LiveRunScreen(session: widget.session),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    )
+                  : ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size.fromHeight(56),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
                         ),
                       ),
-                    );
-                  }
-                },
-                child: Text(isRun ? 'Log Run Session' : 'Start Strength Workout'),
-              ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => ActiveStrengthScreen(
+                              session: widget.session,
+                              customNames: _customExerciseNames,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const Text('Start Strength Workout'),
+                    ),
             ),
           ],
         ),

@@ -89,3 +89,4 @@ class PacingResult {
   String get halfMarathonRangeFormatted =>
       '${PacingCalculator.formatDuration(halfMarathonBestCaseSeconds)} - ${PacingCalculator.formatDuration(halfMarathonConservativeSeconds)}';
 }
+

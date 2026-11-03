@@ -30,6 +30,11 @@ class DatabaseHelper {
         options: OpenDatabaseOptions(
           version: 1,
           onCreate: _createDB,
+          onOpen: (db) async {
+            try {
+              await db.execute('ALTER TABLE workout_logs ADD COLUMN route_json TEXT');
+            } catch (_) {}
+          },
         ),
       );
     }
@@ -41,6 +46,11 @@ class DatabaseHelper {
       path,
       version: 1,
       onCreate: _createDB,
+      onOpen: (db) async {
+        try {
+          await db.execute('ALTER TABLE workout_logs ADD COLUMN route_json TEXT');
+        } catch (_) {}
+      },
     );
   }
 
@@ -57,6 +67,7 @@ class DatabaseHelper {
         run_distance_km REAL,
         run_duration_seconds INTEGER,
         avg_pace_seconds INTEGER,
+        route_json TEXT,
         created_at TEXT NOT NULL
       )
     ''');

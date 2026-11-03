@@ -11,6 +11,7 @@ import '../../providers/settings_provider.dart';
 import '../plan/widgets/swap_session_modal.dart';
 import '../workout/active_strength_screen.dart';
 import '../workout/log_run_screen.dart';
+import '../workout/live_run_screen.dart';
 import '../workout/session_detail_screen.dart';
 import 'widgets/week_strip.dart';
 import 'widgets/readiness_card.dart';
@@ -77,6 +78,76 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
         onResetChange: () {
           ref.read(planProvider.notifier).resetSessionChange(session.date);
         },
+      ),
+    );
+  }
+
+  void _handleStartRun(PlannedSession session) {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Center(
+                child: Container(
+                  width: 44,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 18),
+              Text(
+                'Start Running Session',
+                style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                session.title,
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
+                    ),
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton.icon(
+                icon: const Icon(PhosphorIconsBold.personSimpleRun),
+                label: const Text('Start Live GPS Run'),
+                onPressed: () {
+                  Navigator.pop(ctx);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => LiveRunScreen(session: session),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 12),
+              OutlinedButton.icon(
+                icon: const Icon(PhosphorIconsBold.pencilSimple),
+                label: const Text('Manual Log Entry'),
+                onPressed: () {
+                  Navigator.pop(ctx);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => LogRunScreen(session: session),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -257,12 +328,7 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
                 onStart: () {
                   if (session == null) return;
                   if (session.category == 'run') {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => LogRunScreen(session: session),
-                      ),
-                    );
+                    _handleStartRun(session);
                   } else {
                     Navigator.push(
                       context,
