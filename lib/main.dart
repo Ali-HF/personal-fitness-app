@@ -34,6 +34,36 @@ class FitnessApp extends ConsumerWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: themeMode,
+      builder: (context, child) {
+        // When running on desktop/laptop browser, wrap in a simulated mobile device frame
+        final width = MediaQuery.of(context).size.width;
+        if (width > 500) {
+          return Scaffold(
+            backgroundColor: const Color(0xFF141414),
+            body: Center(
+              child: Container(
+                constraints: const BoxConstraints(maxWidth: 420, maxHeight: 900),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(36),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.5),
+                      blurRadius: 30,
+                      spreadRadius: 4,
+                    ),
+                  ],
+                  border: Border.all(color: const Color(0xFF333333), width: 3),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(33),
+                  child: child,
+                ),
+              ),
+            ),
+          );
+        }
+        return child ?? const SizedBox.shrink();
+      },
       home: const MainScaffold(),
     );
   }
