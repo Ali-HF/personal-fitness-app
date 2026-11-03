@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
 import 'package:uuid/uuid.dart';
 import '../../../core/theme/app_colors.dart';
@@ -38,6 +40,7 @@ class _ActiveStrengthScreenState extends State<ActiveStrengthScreen> {
   @override
   void initState() {
     super.initState();
+    WakelockPlus.enable().catchError((_) {});
     final repo = PlanRepository.instance;
     _exercises = widget.session.exerciseIds
         .map((id) => repo.getExercise(id))
@@ -84,6 +87,7 @@ class _ActiveStrengthScreenState extends State<ActiveStrengthScreen> {
   @override
   void dispose() {
     _restTimer?.cancel();
+    WakelockPlus.disable().catchError((_) {});
     super.dispose();
   }
 
@@ -98,6 +102,7 @@ class _ActiveStrengthScreenState extends State<ActiveStrengthScreen> {
       if (_restSecondsRemaining <= 1) {
         timer.cancel();
         AppHaptics.heavy();
+        SystemSound.play(SystemSoundType.alert);
         setState(() {
           _restSecondsRemaining = 0;
           _isRestTimerActive = false;

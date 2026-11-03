@@ -17,6 +17,7 @@ import '../../../data/models/posture_log.dart';
 import '../../../data/models/user_settings.dart';
 import '../../../data/datasources/database_helper.dart';
 import '../../../domain/rules/export_generator.dart';
+import '../../../core/services/gpx_exporter.dart';
 import '../../providers/logs_provider.dart';
 import '../../providers/plan_provider.dart';
 import '../../providers/settings_provider.dart';
@@ -104,6 +105,37 @@ class _ExportScreenState extends ConsumerState<ExportScreen> {
     await Share.shareXFiles(
       [XFile(file.path)],
       text: 'Ali\'s Fitness Complete Data Backup',
+    );
+  }
+
+  Future<void> _shareGpxTrack() async {
+    AppHaptics.medium();
+    final logsState = ref.read(logsProvider);
+    final runsWithGps = logsState.logsByDate.values
+        .where((l) => l.routeJson != null && l.routeJson!.isNotEmpty)
+        .toList();
+
+    if (runsWithGps.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('No GPS run tracks recorded yet. Complete a Live Run first!')),
+      );
+      return;
+    }
+
+    final latestRun = runsWithGps.last;
+    final gpxContent = GpxExporter.buildGpx(
+      trackName: latestRun.sessionType,
+      dateStr: latestRun.date,
+      routeJson: latestRun.routeJson!,
+    );
+
+    final dir = await getTemporaryDirectory();
+    final file = File('${dir.path}/run_${latestRun.date}.gpx');
+    await file.writeAsString(gpxContent);
+
+    await Share.shareXFiles(
+      [XFile(file.path)],
+      text: 'GPS Run Track for Strava / Watch (${latestRun.date})',
     );
   }
 
@@ -277,6 +309,15 @@ class _ExportScreenState extends ConsumerState<ExportScreen> {
                         ),
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 10),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton.icon(
+                      onPressed: _shareGpxTrack,
+                      icon: const Icon(PhosphorIconsRegular.personSimpleRun, size: 18),
+                      label: const Text('Export GPX for Strava / Watch'),
+                    ),
                   ),
                 ],
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme/app_theme.dart';
+import 'core/services/notification_service.dart';
 import 'data/datasources/database_helper.dart';
 import 'data/datasources/plan_repository.dart';
 import 'presentation/providers/settings_provider.dart';
@@ -12,6 +13,7 @@ void main() async {
   // Initialize local SQLite database and load plan data
   await DatabaseHelper.instance.database;
   await PlanRepository.instance.load();
+  await NotificationService.instance.init();
 
   runApp(
     const ProviderScope(

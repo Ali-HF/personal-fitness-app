@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../data/models/session.dart';
+import '../../../domain/rules/plan_adjuster.dart';
 import '../../providers/plan_provider.dart';
 import '../../providers/logs_provider.dart';
 import '../../providers/settings_provider.dart';
@@ -128,6 +129,64 @@ class _PlanScreenState extends ConsumerState<PlanScreen> {
             ),
 
             const Divider(height: 1),
+
+            // Missed Week Banner & Repeat Option
+            Builder(
+              builder: (ctx) {
+                final weekAnalysis = PlanAdjuster.analyzeWeek(
+                  weekNumber: _selectedWeek,
+                  weekSessions: currentWeekSessions,
+                  changes: planState.changes,
+                  logs: logsState.logsByDate,
+                );
+
+                if (!weekAnalysis.shouldOfferRepeat) return const SizedBox.shrink();
+
+                return Container(
+                  margin: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primary.withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: theme.colorScheme.primary),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(PhosphorIconsFill.warning, color: theme.colorScheme.primary, size: 22),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Missed Sessions (${weekAnalysis.skippedSessionsCount} skipped)',
+                              style: theme.textTheme.labelMedium?.copyWith(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              weekAnalysis.recommendation,
+                              style: theme.textTheme.bodySmall,
+                            ),
+                          ],
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          for (final s in currentWeekSessions) {
+                            if (planState.changes[s.date]?.isSkipped == true) {
+                              ref.read(planProvider.notifier).resetSessionChange(s.date);
+                            }
+                          }
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('Week sessions reset for repetition.')),
+                          );
+                        },
+                        child: const Text('Repeat'),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
 
             // Sessions list for selected week
             Expanded(

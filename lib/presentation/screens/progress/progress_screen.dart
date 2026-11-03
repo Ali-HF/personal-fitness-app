@@ -7,6 +7,8 @@ import '../../../core/theme/app_typography.dart';
 import '../../providers/logs_provider.dart';
 import 'body_tracker_screen.dart';
 import 'fuel_guide_screen.dart';
+import 'widgets/pacing_predictor_card.dart';
+import 'widgets/strength_trend_card.dart';
 
 class ProgressScreen extends ConsumerWidget {
   const ProgressScreen({super.key});
@@ -197,8 +199,18 @@ class ProgressScreen extends ConsumerWidget {
 
             const SizedBox(height: 24),
 
-            // 5K Test vs 20:00 Target Card
-            Text('5K Test (17 Dec 2026)', style: theme.textTheme.titleSmall),
+            // Pacing & Half Marathon Predictor
+            const PacingPredictorCard(),
+
+            const SizedBox(height: 24),
+
+            // Strength Progression Chart
+            StrengthTrendCard(logs: logsState.logsByDate.values.toList()),
+
+            const SizedBox(height: 24),
+
+            // 5K Test Benchmark Card
+            Text('5K Test Target & 20:00 Goal Line', style: theme.textTheme.titleSmall),
             const SizedBox(height: 10),
             Container(
               padding: const EdgeInsets.all(16),
@@ -213,7 +225,7 @@ class ProgressScreen extends ConsumerWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Target Benchmark', style: theme.textTheme.bodyMedium),
+                      Text('Dec 17 Target', style: theme.textTheme.bodyMedium),
                       Text(
                         'Sub-30:00 (Controlled)',
                         style: theme.textTheme.titleSmall?.copyWith(
@@ -239,7 +251,7 @@ class ProgressScreen extends ConsumerWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Paces and half-marathon finishing estimate will be computed automatically once you log the 5K test on Dec 17.',
+                    'Paces and half-marathon finishing estimate update dynamically above based on your time.',
                     style: theme.textTheme.bodySmall,
                   ),
                 ],

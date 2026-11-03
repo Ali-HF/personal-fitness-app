@@ -4,6 +4,7 @@ import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/utils/date_formatters.dart';
 import '../../../core/utils/haptics.dart';
+import '../../../core/services/notification_service.dart';
 import '../../providers/settings_provider.dart';
 import '../../providers/plan_provider.dart';
 import 'export_screen.dart';
@@ -189,11 +190,27 @@ class SettingsScreen extends ConsumerWidget {
               child: Column(
                 children: [
                   SwitchListTile(
+                    title: const Text('Morning Workout Reminder (7:00 AM)'),
+                    subtitle: const Text('Notify me of today\'s planned session in the morning'),
+                    value: settings.reminderMorning,
+                    activeColor: theme.colorScheme.primary,
+                    onChanged: (val) async {
+                      if (val) {
+                        await NotificationService.instance.requestPermissions();
+                      }
+                      settingsNotifier.setReminderMorning(val);
+                    },
+                  ),
+                  const Divider(height: 1),
+                  SwitchListTile(
                     title: const Text('Sunday 8 PM Export Reminder'),
                     subtitle: const Text('Remind me to export weekly summary for review'),
                     value: settings.reminderSundayExport,
                     activeColor: theme.colorScheme.primary,
-                    onChanged: (val) {
+                    onChanged: (val) async {
+                      if (val) {
+                        await NotificationService.instance.requestPermissions();
+                      }
                       settingsNotifier.setReminderSundayExport(val);
                     },
                   ),
