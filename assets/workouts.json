@@ -1,0 +1,405 @@
+{
+  "exercises": [
+    {
+      "id": "pull_ups",
+      "name": "Pull-ups",
+      "pattern": "Vertical Pull",
+      "target": "4 x (max - 2 reps), 2' rest",
+      "defaultSets": 4,
+      "defaultReps": 6,
+      "regressions": [
+        "Chin-ups",
+        "Slow Negatives (5s down)",
+        "Scapular Pull-ups",
+        "Dead Hangs"
+      ],
+      "progressions": [
+        "Chest-to-Bar Pull-ups",
+        "Weighted Pull-ups (+5 kg)"
+      ],
+      "cues": "Drive elbows to ribs, hollow core, full hang at bottom."
+    },
+    {
+      "id": "one_arm_db_row",
+      "name": "One-arm Dumbbell Row",
+      "pattern": "Horizontal Pull",
+      "target": "3 x 10 per side, 2s up / 2s down (10 kg)",
+      "defaultSets": 3,
+      "defaultReps": 10,
+      "defaultWeightKg": 10.0,
+      "regressions": [
+        "Two-arm Dumbbell Row (lighter)",
+        "Incline Bench DB Row"
+      ],
+      "progressions": [
+        "Paused DB Row (2s squeeze at top)",
+        "Slow Eccentric DB Row (3s down)"
+      ],
+      "cues": "Flat back, pull dumbbell towards hip pocket."
+    },
+    {
+      "id": "rear_delt_fly",
+      "name": "Dumbbell Rear-Delt Fly",
+      "pattern": "Hinge / Upper Pull",
+      "target": "3 x 12",
+      "defaultSets": 3,
+      "defaultReps": 12,
+      "defaultWeightKg": 5.0,
+      "regressions": [
+        "Band Pull-aparts",
+        "Bodyweight Reverse Fly"
+      ],
+      "progressions": [
+        "Rear-Delt Fly with 2s Peak Squeeze",
+        "Slow Tempo Rear-Delt Fly"
+      ],
+      "cues": "Hinge at hips, keep slight elbow bend, squeeze rear delts."
+    },
+    {
+      "id": "hanging_knee_raise",
+      "name": "Hanging Knee Raise",
+      "pattern": "Core Flexion",
+      "target": "3 x 8-12",
+      "defaultSets": 3,
+      "defaultReps": 10,
+      "regressions": [
+        "Lying Leg Raise",
+        "Reverse Crunch"
+      ],
+      "progressions": [
+        "Hanging Leg Raise (straight legs)",
+        "Toes to Bar"
+      ],
+      "cues": "Avoid swinging, curl pelvis upward at the top."
+    },
+    {
+      "id": "hollow_hold",
+      "name": "Hollow Hold",
+      "pattern": "Core Isometric",
+      "target": "3 x 20-30s",
+      "defaultSets": 3,
+      "defaultReps": 25,
+      "regressions": [
+        "Bent-knee Hollow Hold",
+        "Dead Bug"
+      ],
+      "progressions": [
+        "Hollow Rock",
+        "V-ups"
+      ],
+      "cues": "Press lower back firmly into floor, tuck chin."
+    },
+    {
+      "id": "db_curl",
+      "name": "Dumbbell Curl",
+      "pattern": "Elbow Flexion",
+      "target": "2 x 12 (optional)",
+      "defaultSets": 2,
+      "defaultReps": 12,
+      "defaultWeightKg": 10.0,
+      "regressions": [
+        "Hammer Curl (lighter)",
+        "Isometric Biceps Hold"
+      ],
+      "progressions": [
+        "Slow Eccentric DB Curl (3s down)",
+        "Concentration Curl"
+      ],
+      "cues": "Elbows pinned to sides, control the descent."
+    },
+    {
+      "id": "push_ups",
+      "name": "Push-ups",
+      "pattern": "Horizontal Push",
+      "target": "4 x (max - 2)",
+      "defaultSets": 4,
+      "defaultReps": 12,
+      "regressions": [
+        "Incline Push-ups (hands on bench/table)",
+        "Knee Push-ups"
+      ],
+      "progressions": [
+        "Feet-elevated Push-ups",
+        "Diamond Push-ups"
+      ],
+      "cues": "Body straight as a plank, elbows at 45 degrees."
+    },
+    {
+      "id": "pike_push_up",
+      "name": "Pike Push-up",
+      "pattern": "Vertical Push",
+      "target": "3 x 6-10 (or DB Overhead Press 10 kg 3 x 10)",
+      "defaultSets": 3,
+      "defaultReps": 8,
+      "regressions": [
+        "Box Pike Push-up",
+        "Dumbbell Overhead Press (light)"
+      ],
+      "progressions": [
+        "Feet-elevated Pike Push-up",
+        "Handstand Push-up Negative"
+      ],
+      "cues": "Hips high, head moves forward forming a tripod with hands."
+    },
+    {
+      "id": "db_floor_press",
+      "name": "Dumbbell Floor Press",
+      "pattern": "Horizontal Push",
+      "target": "3 x 12 (10 kg dumbbells)",
+      "defaultSets": 3,
+      "defaultReps": 12,
+      "defaultWeightKg": 10.0,
+      "regressions": [
+        "Dumbbell Floor Press (lighter)",
+        "Standard Push-ups"
+      ],
+      "progressions": [
+        "Paused DB Floor Press (2s at bottom)",
+        "Single-arm Alternating Floor Press"
+      ],
+      "cues": "Upper arms touch floor gently at 45 degrees, drive straight up."
+    },
+    {
+      "id": "bench_dips",
+      "name": "Bench Dips",
+      "pattern": "Elbow Extension",
+      "target": "3 x 10 on a stable surface",
+      "defaultSets": 3,
+      "defaultReps": 10,
+      "regressions": [
+        "Feet bent close to bench dips",
+        "Triceps Kickbacks"
+      ],
+      "progressions": [
+        "Feet straight out bench dips",
+        "Feet elevated bench dips"
+      ],
+      "cues": "Keep back close to the bench, do not sink into shoulders."
+    },
+    {
+      "id": "plank",
+      "name": "Plank & Side Plank",
+      "pattern": "Core Anti-Extension / Lateral",
+      "target": "Plank 3 x 40s, Side Plank 2 x 25s/side",
+      "defaultSets": 3,
+      "defaultReps": 40,
+      "regressions": [
+        "Knee Plank",
+        "Elevated Plank on Bench"
+      ],
+      "progressions": [
+        "RKC Hardstyle Plank",
+        "Side Plank with Leg Raise"
+      ],
+      "cues": "Glutes tight, ribs pulled toward hips, breathe steadily."
+    },
+    {
+      "id": "superman",
+      "name": "Superman",
+      "pattern": "Posterior Chain",
+      "target": "2 x 12",
+      "defaultSets": 2,
+      "defaultReps": 12,
+      "regressions": [
+        "Bird Dog (alternating)",
+        "Prone Cobra"
+      ],
+      "progressions": [
+        "Swimmer Hold (30s)",
+        "Superman with 3s hold"
+      ],
+      "cues": "Lift chest and thighs off floor, squeeze glutes and upper back."
+    },
+    {
+      "id": "split_squat",
+      "name": "Rear-Foot-Elevated Split Squat",
+      "pattern": "Single-Leg Knee Dominant",
+      "target": "3 x 8 per leg (3s lowering)",
+      "defaultSets": 3,
+      "defaultReps": 8,
+      "regressions": [
+        "Split Squat (both feet on floor)",
+        "Reverse Lunge"
+      ],
+      "progressions": [
+        "10 kg Dumbbell Split Squat",
+        "3s Pause at Bottom Split Squat"
+      ],
+      "cues": "Back foot on chair, slow 3s eccentric, drive through front heel."
+    },
+    {
+      "id": "single_leg_rdl",
+      "name": "Single-Leg Romanian Deadlift",
+      "pattern": "Single-Leg Hip Hinge",
+      "target": "3 x 8 per leg (DB in opposite hand, 3s lowering)",
+      "defaultSets": 3,
+      "defaultReps": 8,
+      "regressions": [
+        "Bodyweight Kickstand RDL",
+        "Bodyweight Single-Leg RDL"
+      ],
+      "progressions": [
+        "10 kg Dumbbell Single-Leg RDL",
+        "Single-Leg RDL with 2s pause"
+      ],
+      "cues": "Hinge at hips, keep back straight, slight bend in standing knee."
+    },
+    {
+      "id": "calf_raise",
+      "name": "Single-Leg Calf Raise",
+      "pattern": "Ankle Plantarflexion",
+      "target": "Straight knee 3 x 12, Bent knee 2 x 12 per leg",
+      "defaultSets": 3,
+      "defaultReps": 12,
+      "regressions": [
+        "Double-Leg Calf Raise",
+        "Assisted Single-Leg Calf Raise"
+      ],
+      "progressions": [
+        "Deficit Single-Leg Calf Raise (on step)",
+        "Weighted Single-Leg Calf Raise (10 kg DB)"
+      ],
+      "cues": "Full stretch at bottom, rise onto big toe, 2s hold at top."
+    },
+    {
+      "id": "glute_bridge",
+      "name": "Single-Leg Glute Bridge",
+      "pattern": "Hip Extension",
+      "target": "3 x 10 per leg",
+      "defaultSets": 3,
+      "defaultReps": 10,
+      "regressions": [
+        "Double-Leg Glute Bridge",
+        "Glute Bridge with 5s hold"
+      ],
+      "progressions": [
+        "Elevated Single-Leg Glute Bridge",
+        "Weighted Glute Bridge (10 kg DB)"
+      ],
+      "cues": "Drive through heel, do not hyperextend lower back."
+    },
+    {
+      "id": "plyo_pogo",
+      "name": "Pogo Hops & Skipping",
+      "pattern": "Plyometrics & Tendon Elasticity",
+      "target": "Pogo hops 2-3 x 15-20, skipping 3 x 20m, side-step lunges 2 x 8/side",
+      "defaultSets": 3,
+      "defaultReps": 20,
+      "regressions": [
+        "Quick Double-Leg Ankle Bounces",
+        "Line Hops Low Impact"
+      ],
+      "progressions": [
+        "Single-Leg Pogo Hops",
+        "Continuous Speed Skips"
+      ],
+      "cues": "Stiff ankles, quick bounce off ground, quiet landings. Skip if sore."
+    }
+  ],
+  "templates": {
+    "UA": {
+      "id": "UA",
+      "title": "Upper A: Pull + Core",
+      "category": "strength",
+      "estimatedMinutes": 45,
+      "warmup": "Arm circles, scapular pull-ups, cat-cow, towel shoulder dislocates (5 min)",
+      "exerciseIds": [
+        "pull_ups",
+        "one_arm_db_row",
+        "rear_delt_fly",
+        "hanging_knee_raise",
+        "hollow_hold",
+        "db_curl"
+      ]
+    },
+    "UB": {
+      "id": "UB",
+      "title": "Upper B: Push + Core",
+      "category": "strength",
+      "estimatedMinutes": 45,
+      "warmup": "Arm circles, wrist rolls, incline push-ups x 10 (5 min)",
+      "exerciseIds": [
+        "push_ups",
+        "pike_push_up",
+        "db_floor_press",
+        "bench_dips",
+        "plank",
+        "superman"
+      ]
+    },
+    "UC": {
+      "id": "UC",
+      "title": "Upper C: Skills & Light",
+      "category": "strength",
+      "estimatedMinutes": 25,
+      "warmup": "Light arm circles and wrist mobility (3 min)",
+      "exerciseIds": [
+        "pull_ups",
+        "push_ups",
+        "hanging_knee_raise"
+      ],
+      "instructions": "Dead hang 3 x 20s, scapular pull-ups 3 x 8, easy push-up ladder, L-sit practice, 5' mobility."
+    },
+    "LEG_A": {
+      "id": "LEG_A",
+      "title": "Leg A: Strength",
+      "category": "strength",
+      "estimatedMinutes": 15,
+      "warmup": "Bodyweight squats and hip circles (3 min)",
+      "exerciseIds": [
+        "split_squat",
+        "single_leg_rdl",
+        "calf_raise"
+      ],
+      "instructions": "Slow 3s lowering on every rep. Bodyweight in weeks 1-2, then add 10 kg dumbbells."
+    },
+    "LEG_B": {
+      "id": "LEG_B",
+      "title": "Leg B: Plyometric & Stability",
+      "category": "strength",
+      "estimatedMinutes": 15,
+      "warmup": "Ankle circles and high knees (3 min)",
+      "exerciseIds": [
+        "glute_bridge",
+        "calf_raise",
+        "plyo_pogo"
+      ],
+      "instructions": "Weeks 1-2: glute bridges + calf raises. Week 3+: add pogo hops and skipping. Skip jumps if sore."
+    },
+    "FINALS_MINI": {
+      "id": "FINALS_MINI",
+      "title": "Finals Mini",
+      "category": "strength",
+      "estimatedMinutes": 20,
+      "warmup": "Joint rotations (2 min)",
+      "exerciseIds": [
+        "pull_ups",
+        "push_ups",
+        "hollow_hold"
+      ],
+      "instructions": "3 rounds, no failure: pull-ups (comfortable reps), push-ups (comfortable reps), hollow hold 20s. Rest 60s between rounds."
+    },
+    "MOBILITY": {
+      "id": "MOBILITY",
+      "title": "Mobility Routine",
+      "category": "mobility",
+      "estimatedMinutes": 15,
+      "instructions": "Hip flexor stretch, hamstring stretch, calf stretch, pigeon pose, thoracic rotation, shoulder opener (10-15 min)."
+    },
+    "POSTURE": {
+      "id": "POSTURE",
+      "title": "Daily Posture Routine",
+      "category": "posture",
+      "estimatedMinutes": 10,
+      "steps": [
+        {"name": "Chin tucks", "detail": "2 x 10, 3s hold (lying down or against wall)"},
+        {"name": "Doorway pec stretch", "detail": "2 x 30s per side"},
+        {"name": "Thoracic extension", "detail": "2 x 8 slow reps over rolled towel / chair back"},
+        {"name": "Wall slides (wall angels)", "detail": "2 x 10 slow reps"},
+        {"name": "Prone Y-T-W raises", "detail": "1 round of 8 reps each (bodyweight)"},
+        {"name": "Scapular pull-ups / Dead hang", "detail": "2 x 8 reps (skip on pull-up days)"},
+        {"name": "Hip flexor stretch", "detail": "2 x 30s per side"}
+      ]
+    }
+  }
+}

@@ -1,0 +1,3381 @@
+{
+  "version": "2.0.0",
+  "variants": {
+    "JAN_3": {
+      "name": "Jan 3 Race (Default)",
+      "raceDate": "2027-01-03",
+      "totalWeeks": 9,
+      "sessions": [
+        {
+          "date": "2026-11-04",
+          "week": 1,
+          "type": "UA",
+          "title": "UA (2 sets) + LEG-A (bodyweight, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A: 2 sets each of Pull-ups, DB Row, Rear-delt Fly, Knee Raise, Hollow Hold, DB Curl",
+            "Leg A: 2 sets bodyweight Rear-foot-elevated Split Squats, Single-leg RDL, Calf Raises"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-04"
+        },
+        {
+          "date": "2026-11-05",
+          "week": 1,
+          "type": "RW",
+          "title": "RW1: 5' walk, 8 x (2' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 34,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 8 x (2' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-05"
+        },
+        {
+          "date": "2026-11-06",
+          "week": 1,
+          "type": "UB",
+          "title": "UB (2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 40,
+          "details": [
+            "Upper B: 2 sets each of Push-ups, Pike Push-ups, DB Floor Press, Bench Dips, Plank (30s), Superman"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-06"
+        },
+        {
+          "date": "2026-11-07",
+          "week": 1,
+          "type": "RW",
+          "title": "RW2: 5' walk, 8 x (3' jog / 1' walk), 5' walk (~4 km)",
+          "category": "run",
+          "isHard": false,
+          "distanceKm": 4.0,
+          "estimatedMinutes": 42,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 8 x (3' jog / 1' walk)",
+            "Cool-down: 5' walk",
+            "Total distance: ~4 km"
+          ],
+          "id": "s_2026-11-07"
+        },
+        {
+          "date": "2026-11-08",
+          "week": 1,
+          "type": "REST",
+          "title": "REST (PS assignment)",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Full rest day. Focus on PS assignment and light walking."
+          ],
+          "id": "s_2026-11-08"
+        },
+        {
+          "date": "2026-11-09",
+          "week": 2,
+          "type": "LEG_B",
+          "title": "LEG-B (glute bridges & calf raises only) + REST",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Single-leg glute bridges: 3 x 10/leg",
+            "Calf raises: 2 x 15",
+            "Collabspace internship + holiday: keep it short"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-09"
+        },
+        {
+          "date": "2026-11-10",
+          "week": 2,
+          "type": "RW",
+          "title": "RW3: 5' walk, 5 x (4' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 5 x (4' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-10"
+        },
+        {
+          "date": "2026-11-11",
+          "week": 2,
+          "type": "UA",
+          "title": "UA (2 sets) + LEG-A (bodyweight, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A (2 sets)",
+            "Leg A (bodyweight, 2 sets)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-11"
+        },
+        {
+          "date": "2026-11-12",
+          "week": 2,
+          "type": "RW",
+          "title": "RW4: 5' walk, 5 x (5' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 5 x (5' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-12"
+        },
+        {
+          "date": "2026-11-13",
+          "week": 2,
+          "type": "LONG",
+          "title": "LONG: 5 km (run 6' / walk 1' as needed)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 5.0,
+          "details": [
+            "Long run: 5 km easy pace",
+            "Strategy: run 6' / walk 1' as needed"
+          ],
+          "id": "s_2026-11-13"
+        },
+        {
+          "date": "2026-11-14",
+          "week": 2,
+          "type": "MOB",
+          "title": "MOB 15 min",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Full body mobility & hip flexor stretches"
+          ],
+          "id": "s_2026-11-14"
+        },
+        {
+          "date": "2026-11-15",
+          "week": 2,
+          "type": "MOB",
+          "title": "MOB / optional UC",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility routine or optional Upper C skill practice"
+          ],
+          "id": "s_2026-11-15"
+        },
+        {
+          "date": "2026-11-16",
+          "week": 3,
+          "type": "LEG_B",
+          "title": "LEG-B (adds 2 x 15 pogo hops)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Single-leg glute bridge: 3 x 10/leg",
+            "Calf raises: 2 x 15",
+            "Pogo hops: 2 x 15 (skip if sore)"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-11-16"
+        },
+        {
+          "date": "2026-11-17",
+          "week": 3,
+          "type": "EASY",
+          "title": "EASY 30' continuous",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog (walk breaks allowed if needed)"
+          ],
+          "id": "s_2026-11-17"
+        },
+        {
+          "date": "2026-11-18",
+          "week": 3,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (add 10 kg DB where possible, 3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 60,
+          "details": [
+            "Upper A: 3 sets",
+            "Leg A: 3 sets (introduce 10 kg dumbbell)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-18"
+        },
+        {
+          "date": "2026-11-19",
+          "week": 3,
+          "type": "INT",
+          "title": "INT-1: 10' easy, 5 x (1' fast / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 35,
+          "details": [
+            "Warm-up: 10' easy jog",
+            "Intervals: 5 x (1' comfortably hard / 2' easy jog)",
+            "Cool-down: 10' easy jog"
+          ],
+          "id": "s_2026-11-19"
+        },
+        {
+          "date": "2026-11-20",
+          "week": 3,
+          "type": "UB",
+          "title": "UB (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper B: 3 sets each of push and core exercises"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-20"
+        },
+        {
+          "date": "2026-11-21",
+          "week": 3,
+          "type": "LONG",
+          "title": "LONG 6 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 6.0,
+          "details": [
+            "6 km steady easy conversational pace (run/walk as needed)"
+          ],
+          "id": "s_2026-11-21"
+        },
+        {
+          "date": "2026-11-22",
+          "week": 3,
+          "type": "MOB",
+          "title": "UC optional / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Active recovery: mobility or optional Upper C"
+          ],
+          "id": "s_2026-11-22"
+        },
+        {
+          "date": "2026-11-23",
+          "week": 4,
+          "type": "LEG_B",
+          "title": "LEG-B",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Glute bridges, calf raises, pogo hops & skipping drills"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-11-23"
+        },
+        {
+          "date": "2026-11-24",
+          "week": 4,
+          "type": "EASY",
+          "title": "EASY 35'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 35,
+          "details": [
+            "35 min easy run at conversational effort"
+          ],
+          "id": "s_2026-11-24"
+        },
+        {
+          "date": "2026-11-25",
+          "week": 4,
+          "type": "UA",
+          "title": "UA (3-4 sets) + LEG-A (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 60,
+          "details": [
+            "Upper A: 3-4 sets",
+            "Leg A: 3 sets with 10 kg dumbbells"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-25"
+        },
+        {
+          "date": "2026-11-26",
+          "week": 4,
+          "type": "INT",
+          "title": "INT-2: 10' easy, 4 x (3' hard / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up: 10' easy jog",
+            "Intervals: 4 x (3' comfortably hard / 2' easy jog)",
+            "Cool-down: 10' easy jog"
+          ],
+          "id": "s_2026-11-26"
+        },
+        {
+          "date": "2026-11-27",
+          "week": 4,
+          "type": "UB",
+          "title": "UB (3-4 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper B: 3-4 sets"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-27"
+        },
+        {
+          "date": "2026-11-28",
+          "week": 4,
+          "type": "LONG",
+          "title": "LONG 7 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 7.0,
+          "details": [
+            "7 km long run, conversational pace, practice run/walk"
+          ],
+          "id": "s_2026-11-28"
+        },
+        {
+          "date": "2026-11-29",
+          "week": 4,
+          "type": "MOB",
+          "title": "UC optional / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility routine or light skill work"
+          ],
+          "id": "s_2026-11-29"
+        },
+        {
+          "date": "2026-11-30",
+          "week": 5,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Full rest day before finals week."
+          ],
+          "id": "s_2026-11-30"
+        },
+        {
+          "date": "2026-12-01",
+          "week": 5,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog"
+          ],
+          "id": "s_2026-12-01"
+        },
+        {
+          "date": "2026-12-02",
+          "week": 5,
+          "type": "FINALS_MINI",
+          "title": "Finals Mini (20 min) + LEG-A (2 sets, 10 min)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 30,
+          "details": [
+            "Finals Mini: 3 rounds (pull-ups, push-ups, hollow hold)",
+            "Leg A: 2 sets (10 min)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "push_ups",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-02"
+        },
+        {
+          "date": "2026-12-03",
+          "week": 5,
+          "type": "REST",
+          "title": "REST: Civics final",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Civics final exam day. Rest."
+          ],
+          "id": "s_2026-12-03"
+        },
+        {
+          "date": "2026-12-04",
+          "week": 5,
+          "type": "EASY",
+          "title": "EASY 25' + 4 x 20\" strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 28,
+          "details": [
+            "25 min easy jog",
+            "4 x 20 sec relaxed fast strides with 45s walk recoveries"
+          ],
+          "id": "s_2026-12-04"
+        },
+        {
+          "date": "2026-12-05",
+          "week": 5,
+          "type": "MOB",
+          "title": "REST / MOB: Ethics exam",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Ethics exam day. Light stretching or complete rest."
+          ],
+          "id": "s_2026-12-05"
+        },
+        {
+          "date": "2026-12-06",
+          "week": 5,
+          "type": "LONG",
+          "title": "LONG 8 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 8.0,
+          "details": [
+            "8 km long run at easy conversational pace"
+          ],
+          "id": "s_2026-12-06"
+        },
+        {
+          "date": "2026-12-07",
+          "week": 6,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest and exam prep."
+          ],
+          "id": "s_2026-12-07"
+        },
+        {
+          "date": "2026-12-08",
+          "week": 6,
+          "type": "MOB",
+          "title": "MOB 10': DSA exam",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 10,
+          "details": [
+            "DSA exam day. 10 min gentle mobility."
+          ],
+          "id": "s_2026-12-08"
+        },
+        {
+          "date": "2026-12-09",
+          "week": 6,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog to clear mind."
+          ],
+          "id": "s_2026-12-09"
+        },
+        {
+          "date": "2026-12-10",
+          "week": 6,
+          "type": "REST",
+          "title": "REST: PS exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "PS exam day. Rest."
+          ],
+          "id": "s_2026-12-10"
+        },
+        {
+          "date": "2026-12-11",
+          "week": 6,
+          "type": "EASY",
+          "title": "EASY 30' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 34,
+          "details": [
+            "30 min easy jog + 4 strides"
+          ],
+          "id": "s_2026-12-11"
+        },
+        {
+          "date": "2026-12-12",
+          "week": 6,
+          "type": "REST",
+          "title": "REST: ARW exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "ARW exam day. Rest."
+          ],
+          "id": "s_2026-12-12"
+        },
+        {
+          "date": "2026-12-13",
+          "week": 6,
+          "type": "LONG",
+          "title": "LONG 9 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 9.0,
+          "details": [
+            "9 km easy long run with run/walk pattern"
+          ],
+          "id": "s_2026-12-13"
+        },
+        {
+          "date": "2026-12-14",
+          "week": 7,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest day."
+          ],
+          "id": "s_2026-12-14"
+        },
+        {
+          "date": "2026-12-15",
+          "week": 7,
+          "type": "REST",
+          "title": "REST: LADE exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "LADE exam day (finals finish!)."
+          ],
+          "id": "s_2026-12-15"
+        },
+        {
+          "date": "2026-12-16",
+          "week": 7,
+          "type": "UA",
+          "title": "UA (light, stop 2 reps before failure) + LEG-A (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper A light (no failure, prep for 5k test tomorrow)",
+            "Leg A: 3 sets"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-16"
+        },
+        {
+          "date": "2026-12-17",
+          "week": 7,
+          "type": "TEST5K",
+          "title": "5K TEST (controlled, not all-out)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 5.0,
+          "details": [
+            "Warm-up: 10' easy jog + 4 strides",
+            "5 km at comfortably-hard steady effort (~8/10, finish feeling you could do another min)",
+            "Cool-down: 10' walk"
+          ],
+          "id": "s_2026-12-17"
+        },
+        {
+          "date": "2026-12-18",
+          "week": 7,
+          "type": "MOB",
+          "title": "REST / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Post 5k test recovery and mobility."
+          ],
+          "id": "s_2026-12-18"
+        },
+        {
+          "date": "2026-12-19",
+          "week": 7,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy recovery run"
+          ],
+          "id": "s_2026-12-19"
+        },
+        {
+          "date": "2026-12-20",
+          "week": 7,
+          "type": "LONG",
+          "title": "LONG 10.5 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 10.5,
+          "details": [
+            "10.5 km long run. Test race run/walk pattern (8' run / 1' walk)."
+          ],
+          "id": "s_2026-12-20"
+        },
+        {
+          "date": "2026-12-21",
+          "week": 8,
+          "type": "LEG_B",
+          "title": "LEG-B (last one)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Final Leg B session before race build peak"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-12-21"
+        },
+        {
+          "date": "2026-12-22",
+          "week": 8,
+          "type": "EASY",
+          "title": "EASY 40'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 40,
+          "details": [
+            "40 min easy aerobic run"
+          ],
+          "id": "s_2026-12-22"
+        },
+        {
+          "date": "2026-12-23",
+          "week": 8,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (last one, 2-3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A: 3 sets",
+            "Leg A: 2-3 sets (last heavy leg session)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-23"
+        },
+        {
+          "date": "2026-12-24",
+          "week": 8,
+          "type": "TEMPO",
+          "title": "TEMPO: 10' easy, 2 x 10' tempo (3' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 43,
+          "details": [
+            "Warm-up: 10' easy",
+            "Tempo: 2 x 10' comfortably hard with 3' jog recovery",
+            "Cool-down: 10' easy"
+          ],
+          "id": "s_2026-12-24"
+        },
+        {
+          "date": "2026-12-25",
+          "week": 8,
+          "type": "UB",
+          "title": "UB (2-3 sets, light)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Upper B: 2-3 light sets, keep crisp"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-12-25"
+        },
+        {
+          "date": "2026-12-26",
+          "week": 8,
+          "type": "LONG",
+          "title": "LONG 12 km easy (peak)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 12.0,
+          "details": [
+            "12 km peak long run, test run/walk strategy thoroughly"
+          ],
+          "id": "s_2026-12-26"
+        },
+        {
+          "date": "2026-12-27",
+          "week": 8,
+          "type": "MOB",
+          "title": "MOB / optional UC",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility or optional light Upper C"
+          ],
+          "id": "s_2026-12-27"
+        },
+        {
+          "date": "2026-12-28",
+          "week": 9,
+          "type": "REST",
+          "title": "REST (no leg strength this week)",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Race week taper begins! No leg strength work."
+          ],
+          "id": "s_2026-12-28"
+        },
+        {
+          "date": "2026-12-29",
+          "week": 9,
+          "type": "EASY",
+          "title": "EASY 30' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 34,
+          "details": [
+            "30 min easy jog + 4 light strides"
+          ],
+          "id": "s_2026-12-29"
+        },
+        {
+          "date": "2026-12-30",
+          "week": 9,
+          "type": "UA",
+          "title": "UA light (2 sets, no failure)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 30,
+          "details": [
+            "Upper A light: 2 easy sets, stay far from failure"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold"
+          ],
+          "id": "s_2026-12-30"
+        },
+        {
+          "date": "2026-12-31",
+          "week": 9,
+          "type": "EASY",
+          "title": "EASY 20' inc. 3 x 1' comfortably hard",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 20,
+          "details": [
+            "20 min easy jog including 3 x 1' comfortably hard (keeps leg turnover, low volume)"
+          ],
+          "id": "s_2026-12-31"
+        },
+        {
+          "date": "2027-01-01",
+          "week": 9,
+          "type": "REST",
+          "title": "REST or UC very light",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Full rest or light mobility / dead hangs"
+          ],
+          "id": "s_2027-01-01"
+        },
+        {
+          "date": "2027-01-02",
+          "week": 9,
+          "type": "SHAKE",
+          "title": "SHAKE: 15' easy + 3 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 18,
+          "details": [
+            "Pre-race shakeout: 15 min very easy + 3 gentle strides"
+          ],
+          "id": "s_2027-01-02"
+        },
+        {
+          "date": "2027-01-03",
+          "week": 9,
+          "type": "RACE",
+          "title": "RACE DAY: HALF MARATHON",
+          "category": "race",
+          "isHard": true,
+          "distanceKm": 21.1,
+          "details": [
+            "HALF MARATHON (21.1 km)",
+            "Run/walk strategy from start (8' run / 1' walk)",
+            "Start slower than feels necessary for first 5 km",
+            "Drink to thirst, eat only familiar foods"
+          ],
+          "id": "s_2027-01-03"
+        }
+      ]
+    },
+    "JAN_17": {
+      "name": "Option B: Jan 17 Race",
+      "raceDate": "2027-01-17",
+      "totalWeeks": 11,
+      "sessions": [
+        {
+          "date": "2026-11-04",
+          "week": 1,
+          "type": "UA",
+          "title": "UA (2 sets) + LEG-A (bodyweight, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A: 2 sets each of Pull-ups, DB Row, Rear-delt Fly, Knee Raise, Hollow Hold, DB Curl",
+            "Leg A: 2 sets bodyweight Rear-foot-elevated Split Squats, Single-leg RDL, Calf Raises"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-04_b"
+        },
+        {
+          "date": "2026-11-05",
+          "week": 1,
+          "type": "RW",
+          "title": "RW1: 5' walk, 8 x (2' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 34,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 8 x (2' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-05_b"
+        },
+        {
+          "date": "2026-11-06",
+          "week": 1,
+          "type": "UB",
+          "title": "UB (2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 40,
+          "details": [
+            "Upper B: 2 sets each of Push-ups, Pike Push-ups, DB Floor Press, Bench Dips, Plank (30s), Superman"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-06_b"
+        },
+        {
+          "date": "2026-11-07",
+          "week": 1,
+          "type": "RW",
+          "title": "RW2: 5' walk, 8 x (3' jog / 1' walk), 5' walk (~4 km)",
+          "category": "run",
+          "isHard": false,
+          "distanceKm": 4.0,
+          "estimatedMinutes": 42,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 8 x (3' jog / 1' walk)",
+            "Cool-down: 5' walk",
+            "Total distance: ~4 km"
+          ],
+          "id": "s_2026-11-07_b"
+        },
+        {
+          "date": "2026-11-08",
+          "week": 1,
+          "type": "REST",
+          "title": "REST (PS assignment)",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Full rest day. Focus on PS assignment and light walking."
+          ],
+          "id": "s_2026-11-08_b"
+        },
+        {
+          "date": "2026-11-09",
+          "week": 2,
+          "type": "LEG_B",
+          "title": "LEG-B (glute bridges & calf raises only) + REST",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Single-leg glute bridges: 3 x 10/leg",
+            "Calf raises: 2 x 15",
+            "Collabspace internship + holiday: keep it short"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-09_b"
+        },
+        {
+          "date": "2026-11-10",
+          "week": 2,
+          "type": "RW",
+          "title": "RW3: 5' walk, 5 x (4' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 5 x (4' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-10_b"
+        },
+        {
+          "date": "2026-11-11",
+          "week": 2,
+          "type": "UA",
+          "title": "UA (2 sets) + LEG-A (bodyweight, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A (2 sets)",
+            "Leg A (bodyweight, 2 sets)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-11_b"
+        },
+        {
+          "date": "2026-11-12",
+          "week": 2,
+          "type": "RW",
+          "title": "RW4: 5' walk, 5 x (5' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 5 x (5' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-12_b"
+        },
+        {
+          "date": "2026-11-13",
+          "week": 2,
+          "type": "LONG",
+          "title": "LONG: 5 km (run 6' / walk 1' as needed)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 5.0,
+          "details": [
+            "Long run: 5 km easy pace",
+            "Strategy: run 6' / walk 1' as needed"
+          ],
+          "id": "s_2026-11-13_b"
+        },
+        {
+          "date": "2026-11-14",
+          "week": 2,
+          "type": "MOB",
+          "title": "MOB 15 min",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Full body mobility & hip flexor stretches"
+          ],
+          "id": "s_2026-11-14_b"
+        },
+        {
+          "date": "2026-11-15",
+          "week": 2,
+          "type": "MOB",
+          "title": "MOB / optional UC",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility routine or optional Upper C skill practice"
+          ],
+          "id": "s_2026-11-15_b"
+        },
+        {
+          "date": "2026-11-16",
+          "week": 3,
+          "type": "LEG_B",
+          "title": "LEG-B (adds 2 x 15 pogo hops)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Single-leg glute bridge: 3 x 10/leg",
+            "Calf raises: 2 x 15",
+            "Pogo hops: 2 x 15 (skip if sore)"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-11-16_b"
+        },
+        {
+          "date": "2026-11-17",
+          "week": 3,
+          "type": "EASY",
+          "title": "EASY 30' continuous",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog (walk breaks allowed if needed)"
+          ],
+          "id": "s_2026-11-17_b"
+        },
+        {
+          "date": "2026-11-18",
+          "week": 3,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (add 10 kg DB where possible, 3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 60,
+          "details": [
+            "Upper A: 3 sets",
+            "Leg A: 3 sets (introduce 10 kg dumbbell)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-18_b"
+        },
+        {
+          "date": "2026-11-19",
+          "week": 3,
+          "type": "INT",
+          "title": "INT-1: 10' easy, 5 x (1' fast / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 35,
+          "details": [
+            "Warm-up: 10' easy jog",
+            "Intervals: 5 x (1' comfortably hard / 2' easy jog)",
+            "Cool-down: 10' easy jog"
+          ],
+          "id": "s_2026-11-19_b"
+        },
+        {
+          "date": "2026-11-20",
+          "week": 3,
+          "type": "UB",
+          "title": "UB (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper B: 3 sets each of push and core exercises"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-20_b"
+        },
+        {
+          "date": "2026-11-21",
+          "week": 3,
+          "type": "LONG",
+          "title": "LONG 6 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 6.0,
+          "details": [
+            "6 km steady easy conversational pace (run/walk as needed)"
+          ],
+          "id": "s_2026-11-21_b"
+        },
+        {
+          "date": "2026-11-22",
+          "week": 3,
+          "type": "MOB",
+          "title": "UC optional / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Active recovery: mobility or optional Upper C"
+          ],
+          "id": "s_2026-11-22_b"
+        },
+        {
+          "date": "2026-11-23",
+          "week": 4,
+          "type": "LEG_B",
+          "title": "LEG-B",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Glute bridges, calf raises, pogo hops & skipping drills"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-11-23_b"
+        },
+        {
+          "date": "2026-11-24",
+          "week": 4,
+          "type": "EASY",
+          "title": "EASY 35'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 35,
+          "details": [
+            "35 min easy run at conversational effort"
+          ],
+          "id": "s_2026-11-24_b"
+        },
+        {
+          "date": "2026-11-25",
+          "week": 4,
+          "type": "UA",
+          "title": "UA (3-4 sets) + LEG-A (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 60,
+          "details": [
+            "Upper A: 3-4 sets",
+            "Leg A: 3 sets with 10 kg dumbbells"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-25_b"
+        },
+        {
+          "date": "2026-11-26",
+          "week": 4,
+          "type": "INT",
+          "title": "INT-2: 10' easy, 4 x (3' hard / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up: 10' easy jog",
+            "Intervals: 4 x (3' comfortably hard / 2' easy jog)",
+            "Cool-down: 10' easy jog"
+          ],
+          "id": "s_2026-11-26_b"
+        },
+        {
+          "date": "2026-11-27",
+          "week": 4,
+          "type": "UB",
+          "title": "UB (3-4 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper B: 3-4 sets"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-27_b"
+        },
+        {
+          "date": "2026-11-28",
+          "week": 4,
+          "type": "LONG",
+          "title": "LONG 7 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 7.0,
+          "details": [
+            "7 km long run, conversational pace, practice run/walk"
+          ],
+          "id": "s_2026-11-28_b"
+        },
+        {
+          "date": "2026-11-29",
+          "week": 4,
+          "type": "MOB",
+          "title": "UC optional / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility routine or light skill work"
+          ],
+          "id": "s_2026-11-29_b"
+        },
+        {
+          "date": "2026-11-30",
+          "week": 5,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Full rest day before finals week."
+          ],
+          "id": "s_2026-11-30_b"
+        },
+        {
+          "date": "2026-12-01",
+          "week": 5,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog"
+          ],
+          "id": "s_2026-12-01_b"
+        },
+        {
+          "date": "2026-12-02",
+          "week": 5,
+          "type": "FINALS_MINI",
+          "title": "Finals Mini (20 min) + LEG-A (2 sets, 10 min)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 30,
+          "details": [
+            "Finals Mini: 3 rounds (pull-ups, push-ups, hollow hold)",
+            "Leg A: 2 sets (10 min)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "push_ups",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-02_b"
+        },
+        {
+          "date": "2026-12-03",
+          "week": 5,
+          "type": "REST",
+          "title": "REST: Civics final",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Civics final exam day. Rest."
+          ],
+          "id": "s_2026-12-03_b"
+        },
+        {
+          "date": "2026-12-04",
+          "week": 5,
+          "type": "EASY",
+          "title": "EASY 25' + 4 x 20\" strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 28,
+          "details": [
+            "25 min easy jog",
+            "4 x 20 sec relaxed fast strides with 45s walk recoveries"
+          ],
+          "id": "s_2026-12-04_b"
+        },
+        {
+          "date": "2026-12-05",
+          "week": 5,
+          "type": "MOB",
+          "title": "REST / MOB: Ethics exam",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Ethics exam day. Light stretching or complete rest."
+          ],
+          "id": "s_2026-12-05_b"
+        },
+        {
+          "date": "2026-12-06",
+          "week": 5,
+          "type": "LONG",
+          "title": "LONG 8 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 8.0,
+          "details": [
+            "8 km long run at easy conversational pace"
+          ],
+          "id": "s_2026-12-06_b"
+        },
+        {
+          "date": "2026-12-07",
+          "week": 6,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest and exam prep."
+          ],
+          "id": "s_2026-12-07_b"
+        },
+        {
+          "date": "2026-12-08",
+          "week": 6,
+          "type": "MOB",
+          "title": "MOB 10': DSA exam",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 10,
+          "details": [
+            "DSA exam day. 10 min gentle mobility."
+          ],
+          "id": "s_2026-12-08_b"
+        },
+        {
+          "date": "2026-12-09",
+          "week": 6,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog to clear mind."
+          ],
+          "id": "s_2026-12-09_b"
+        },
+        {
+          "date": "2026-12-10",
+          "week": 6,
+          "type": "REST",
+          "title": "REST: PS exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "PS exam day. Rest."
+          ],
+          "id": "s_2026-12-10_b"
+        },
+        {
+          "date": "2026-12-11",
+          "week": 6,
+          "type": "EASY",
+          "title": "EASY 30' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 34,
+          "details": [
+            "30 min easy jog + 4 strides"
+          ],
+          "id": "s_2026-12-11_b"
+        },
+        {
+          "date": "2026-12-12",
+          "week": 6,
+          "type": "REST",
+          "title": "REST: ARW exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "ARW exam day. Rest."
+          ],
+          "id": "s_2026-12-12_b"
+        },
+        {
+          "date": "2026-12-13",
+          "week": 6,
+          "type": "LONG",
+          "title": "LONG 9 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 9.0,
+          "details": [
+            "9 km easy long run with run/walk pattern"
+          ],
+          "id": "s_2026-12-13_b"
+        },
+        {
+          "date": "2026-12-14",
+          "week": 7,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest day."
+          ],
+          "id": "s_2026-12-14_b"
+        },
+        {
+          "date": "2026-12-15",
+          "week": 7,
+          "type": "REST",
+          "title": "REST: LADE exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "LADE exam day (finals finish!)."
+          ],
+          "id": "s_2026-12-15_b"
+        },
+        {
+          "date": "2026-12-16",
+          "week": 7,
+          "type": "UA",
+          "title": "UA (light, stop 2 reps before failure) + LEG-A (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper A light (no failure, prep for 5k test tomorrow)",
+            "Leg A: 3 sets"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-16_b"
+        },
+        {
+          "date": "2026-12-17",
+          "week": 7,
+          "type": "TEST5K",
+          "title": "5K TEST (controlled, not all-out)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 5.0,
+          "details": [
+            "Warm-up: 10' easy jog + 4 strides",
+            "5 km at comfortably-hard steady effort (~8/10, finish feeling you could do another min)",
+            "Cool-down: 10' walk"
+          ],
+          "id": "s_2026-12-17_b"
+        },
+        {
+          "date": "2026-12-18",
+          "week": 7,
+          "type": "MOB",
+          "title": "REST / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Post 5k test recovery and mobility."
+          ],
+          "id": "s_2026-12-18_b"
+        },
+        {
+          "date": "2026-12-19",
+          "week": 7,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy recovery run"
+          ],
+          "id": "s_2026-12-19_b"
+        },
+        {
+          "date": "2026-12-20",
+          "week": 7,
+          "type": "LONG",
+          "title": "LONG 10.5 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 10.5,
+          "details": [
+            "10.5 km long run. Test race run/walk pattern (8' run / 1' walk)."
+          ],
+          "id": "s_2026-12-20_b"
+        },
+        {
+          "date": "2026-12-21",
+          "week": 8,
+          "type": "LEG_B",
+          "title": "LEG-B (last one)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Final Leg B session before race build peak"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-12-21_b"
+        },
+        {
+          "date": "2026-12-22",
+          "week": 8,
+          "type": "EASY",
+          "title": "EASY 40'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 40,
+          "details": [
+            "40 min easy aerobic run"
+          ],
+          "id": "s_2026-12-22_b"
+        },
+        {
+          "date": "2026-12-23",
+          "week": 8,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (last one, 2-3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A: 3 sets",
+            "Leg A: 2-3 sets (last heavy leg session)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-23_b"
+        },
+        {
+          "date": "2026-12-24",
+          "week": 8,
+          "type": "TEMPO",
+          "title": "TEMPO: 10' easy, 2 x 10' tempo (3' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 43,
+          "details": [
+            "Warm-up: 10' easy",
+            "Tempo: 2 x 10' comfortably hard with 3' jog recovery",
+            "Cool-down: 10' easy"
+          ],
+          "id": "s_2026-12-24_b"
+        },
+        {
+          "date": "2026-12-25",
+          "week": 8,
+          "type": "UB",
+          "title": "UB (2-3 sets, light)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Upper B: 2-3 light sets, keep crisp"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-12-25_b"
+        },
+        {
+          "date": "2026-12-26",
+          "week": 8,
+          "type": "LONG",
+          "title": "LONG 12 km easy (peak)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 12.0,
+          "details": [
+            "12 km peak long run, test run/walk strategy thoroughly"
+          ],
+          "id": "s_2026-12-26_b"
+        },
+        {
+          "date": "2026-12-27",
+          "week": 8,
+          "type": "MOB",
+          "title": "MOB / optional UC",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility or optional light Upper C"
+          ],
+          "id": "s_2026-12-27_b"
+        },
+        {
+          "date": "2026-12-28",
+          "week": 9,
+          "type": "LEG_B",
+          "title": "LEG-B (last one)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Last Leg B session"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-12-28_b"
+        },
+        {
+          "date": "2026-12-29",
+          "week": 9,
+          "type": "EASY",
+          "title": "EASY 40'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 40,
+          "details": [
+            "40 min easy run"
+          ],
+          "id": "s_2026-12-29_b"
+        },
+        {
+          "date": "2026-12-30",
+          "week": 9,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (last one, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 50,
+          "details": [
+            "UA 3 sets, Leg A 2 sets"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-30_b"
+        },
+        {
+          "date": "2026-12-31",
+          "week": 9,
+          "type": "INT",
+          "title": "INT-2: 10' easy, 4 x (3' hard / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up 10', 4 x (3' hard / 2' jog), cool-down 10'"
+          ],
+          "id": "s_2026-12-31_b"
+        },
+        {
+          "date": "2027-01-01",
+          "week": 9,
+          "type": "UB",
+          "title": "UB (2-3 sets, light)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Upper B light"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2027-01-01_b"
+        },
+        {
+          "date": "2027-01-02",
+          "week": 9,
+          "type": "LONG",
+          "title": "LONG 13.5 km easy (peak)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 13.5,
+          "details": [
+            "13.5 km peak long run, test race run/walk pattern"
+          ],
+          "id": "s_2027-01-02_b"
+        },
+        {
+          "date": "2027-01-03",
+          "week": 9,
+          "type": "MOB",
+          "title": "MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Recovery mobility"
+          ],
+          "id": "s_2027-01-03_b"
+        },
+        {
+          "date": "2027-01-04",
+          "week": 10,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Taper week 1 starts"
+          ],
+          "id": "s_2027-01-04_b"
+        },
+        {
+          "date": "2027-01-05",
+          "week": 10,
+          "type": "EASY",
+          "title": "EASY 30' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 34,
+          "details": [
+            "30 min easy jog + 4 strides"
+          ],
+          "id": "s_2027-01-05_b"
+        },
+        {
+          "date": "2027-01-06",
+          "week": 10,
+          "type": "UA",
+          "title": "UA light (2 sets, no failure)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 30,
+          "details": [
+            "UA 2 easy sets"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold"
+          ],
+          "id": "s_2027-01-06_b"
+        },
+        {
+          "date": "2027-01-07",
+          "week": 10,
+          "type": "EASY",
+          "title": "EASY 25' inc. 3 x 1' comfortably hard",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 25,
+          "details": [
+            "25 min easy with 3 x 1' pick-ups"
+          ],
+          "id": "s_2027-01-07_b"
+        },
+        {
+          "date": "2027-01-08",
+          "week": 10,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest day"
+          ],
+          "id": "s_2027-01-08_b"
+        },
+        {
+          "date": "2027-01-09",
+          "week": 10,
+          "type": "LONG",
+          "title": "LONG 8 km easy (taper week 1)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 8.0,
+          "details": [
+            "8 km easy run, 40% less volume than peak"
+          ],
+          "id": "s_2027-01-09_b"
+        },
+        {
+          "date": "2027-01-10",
+          "week": 10,
+          "type": "MOB",
+          "title": "MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Mobility"
+          ],
+          "id": "s_2027-01-10_b"
+        },
+        {
+          "date": "2027-01-11",
+          "week": 11,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Race week taper begins"
+          ],
+          "id": "s_2027-01-11_b"
+        },
+        {
+          "date": "2027-01-12",
+          "week": 11,
+          "type": "EASY",
+          "title": "EASY 25' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 29,
+          "details": [
+            "25 min easy jog + 4 strides"
+          ],
+          "id": "s_2027-01-12_b"
+        },
+        {
+          "date": "2027-01-13",
+          "week": 11,
+          "type": "UA",
+          "title": "UA very light (2 sets, no failure)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 25,
+          "details": [
+            "Very light Upper A maintenance"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "hanging_knee_raise"
+          ],
+          "id": "s_2027-01-13_b"
+        },
+        {
+          "date": "2027-01-14",
+          "week": 11,
+          "type": "EASY",
+          "title": "EASY 20' inc. 3 x 1' comfortably hard",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 20,
+          "details": [
+            "20 min easy with 3 x 1' surges"
+          ],
+          "id": "s_2027-01-14_b"
+        },
+        {
+          "date": "2027-01-15",
+          "week": 11,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest & carbo-loading"
+          ],
+          "id": "s_2027-01-15_b"
+        },
+        {
+          "date": "2027-01-16",
+          "week": 11,
+          "type": "SHAKE",
+          "title": "SHAKE: 15' easy + 3 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 18,
+          "details": [
+            "Pre-race shakeout: 15' easy + 3 strides"
+          ],
+          "id": "s_2027-01-16_b"
+        },
+        {
+          "date": "2027-01-17",
+          "week": 11,
+          "type": "RACE",
+          "title": "RACE DAY: HALF MARATHON",
+          "category": "race",
+          "isHard": true,
+          "distanceKm": 21.1,
+          "details": [
+            "HALF MARATHON (21.1 km)",
+            "Option B Race Day!"
+          ],
+          "id": "s_2027-01-17_b"
+        }
+      ]
+    },
+    "JAN_24": {
+      "name": "Option C: Jan 24 Race (Recommended)",
+      "raceDate": "2027-01-24",
+      "totalWeeks": 12,
+      "sessions": [
+        {
+          "date": "2026-11-04",
+          "week": 1,
+          "type": "UA",
+          "title": "UA (2 sets) + LEG-A (bodyweight, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A: 2 sets each of Pull-ups, DB Row, Rear-delt Fly, Knee Raise, Hollow Hold, DB Curl",
+            "Leg A: 2 sets bodyweight Rear-foot-elevated Split Squats, Single-leg RDL, Calf Raises"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-04_c"
+        },
+        {
+          "date": "2026-11-05",
+          "week": 1,
+          "type": "RW",
+          "title": "RW1: 5' walk, 8 x (2' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 34,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 8 x (2' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-05_c"
+        },
+        {
+          "date": "2026-11-06",
+          "week": 1,
+          "type": "UB",
+          "title": "UB (2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 40,
+          "details": [
+            "Upper B: 2 sets each of Push-ups, Pike Push-ups, DB Floor Press, Bench Dips, Plank (30s), Superman"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-06_c"
+        },
+        {
+          "date": "2026-11-07",
+          "week": 1,
+          "type": "RW",
+          "title": "RW2: 5' walk, 8 x (3' jog / 1' walk), 5' walk (~4 km)",
+          "category": "run",
+          "isHard": false,
+          "distanceKm": 4.0,
+          "estimatedMinutes": 42,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 8 x (3' jog / 1' walk)",
+            "Cool-down: 5' walk",
+            "Total distance: ~4 km"
+          ],
+          "id": "s_2026-11-07_c"
+        },
+        {
+          "date": "2026-11-08",
+          "week": 1,
+          "type": "REST",
+          "title": "REST (PS assignment)",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Full rest day. Focus on PS assignment and light walking."
+          ],
+          "id": "s_2026-11-08_c"
+        },
+        {
+          "date": "2026-11-09",
+          "week": 2,
+          "type": "LEG_B",
+          "title": "LEG-B (glute bridges & calf raises only) + REST",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Single-leg glute bridges: 3 x 10/leg",
+            "Calf raises: 2 x 15",
+            "Collabspace internship + holiday: keep it short"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-09_c"
+        },
+        {
+          "date": "2026-11-10",
+          "week": 2,
+          "type": "RW",
+          "title": "RW3: 5' walk, 5 x (4' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 5 x (4' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-10_c"
+        },
+        {
+          "date": "2026-11-11",
+          "week": 2,
+          "type": "UA",
+          "title": "UA (2 sets) + LEG-A (bodyweight, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A (2 sets)",
+            "Leg A (bodyweight, 2 sets)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-11_c"
+        },
+        {
+          "date": "2026-11-12",
+          "week": 2,
+          "type": "RW",
+          "title": "RW4: 5' walk, 5 x (5' jog / 1' walk), 5' walk",
+          "category": "run",
+          "isHard": false,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up: 5' brisk walk",
+            "Intervals: 5 x (5' jog / 1' walk)",
+            "Cool-down: 5' walk"
+          ],
+          "id": "s_2026-11-12_c"
+        },
+        {
+          "date": "2026-11-13",
+          "week": 2,
+          "type": "LONG",
+          "title": "LONG: 5 km (run 6' / walk 1' as needed)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 5.0,
+          "details": [
+            "Long run: 5 km easy pace",
+            "Strategy: run 6' / walk 1' as needed"
+          ],
+          "id": "s_2026-11-13_c"
+        },
+        {
+          "date": "2026-11-14",
+          "week": 2,
+          "type": "MOB",
+          "title": "MOB 15 min",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Full body mobility & hip flexor stretches"
+          ],
+          "id": "s_2026-11-14_c"
+        },
+        {
+          "date": "2026-11-15",
+          "week": 2,
+          "type": "MOB",
+          "title": "MOB / optional UC",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility routine or optional Upper C skill practice"
+          ],
+          "id": "s_2026-11-15_c"
+        },
+        {
+          "date": "2026-11-16",
+          "week": 3,
+          "type": "LEG_B",
+          "title": "LEG-B (adds 2 x 15 pogo hops)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Single-leg glute bridge: 3 x 10/leg",
+            "Calf raises: 2 x 15",
+            "Pogo hops: 2 x 15 (skip if sore)"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-11-16_c"
+        },
+        {
+          "date": "2026-11-17",
+          "week": 3,
+          "type": "EASY",
+          "title": "EASY 30' continuous",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog (walk breaks allowed if needed)"
+          ],
+          "id": "s_2026-11-17_c"
+        },
+        {
+          "date": "2026-11-18",
+          "week": 3,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (add 10 kg DB where possible, 3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 60,
+          "details": [
+            "Upper A: 3 sets",
+            "Leg A: 3 sets (introduce 10 kg dumbbell)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-18_c"
+        },
+        {
+          "date": "2026-11-19",
+          "week": 3,
+          "type": "INT",
+          "title": "INT-1: 10' easy, 5 x (1' fast / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 35,
+          "details": [
+            "Warm-up: 10' easy jog",
+            "Intervals: 5 x (1' comfortably hard / 2' easy jog)",
+            "Cool-down: 10' easy jog"
+          ],
+          "id": "s_2026-11-19_c"
+        },
+        {
+          "date": "2026-11-20",
+          "week": 3,
+          "type": "UB",
+          "title": "UB (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper B: 3 sets each of push and core exercises"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-20_c"
+        },
+        {
+          "date": "2026-11-21",
+          "week": 3,
+          "type": "LONG",
+          "title": "LONG 6 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 6.0,
+          "details": [
+            "6 km steady easy conversational pace (run/walk as needed)"
+          ],
+          "id": "s_2026-11-21_c"
+        },
+        {
+          "date": "2026-11-22",
+          "week": 3,
+          "type": "MOB",
+          "title": "UC optional / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Active recovery: mobility or optional Upper C"
+          ],
+          "id": "s_2026-11-22_c"
+        },
+        {
+          "date": "2026-11-23",
+          "week": 4,
+          "type": "LEG_B",
+          "title": "LEG-B",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Glute bridges, calf raises, pogo hops & skipping drills"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-11-23_c"
+        },
+        {
+          "date": "2026-11-24",
+          "week": 4,
+          "type": "EASY",
+          "title": "EASY 35'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 35,
+          "details": [
+            "35 min easy run at conversational effort"
+          ],
+          "id": "s_2026-11-24_c"
+        },
+        {
+          "date": "2026-11-25",
+          "week": 4,
+          "type": "UA",
+          "title": "UA (3-4 sets) + LEG-A (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 60,
+          "details": [
+            "Upper A: 3-4 sets",
+            "Leg A: 3 sets with 10 kg dumbbells"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-11-25_c"
+        },
+        {
+          "date": "2026-11-26",
+          "week": 4,
+          "type": "INT",
+          "title": "INT-2: 10' easy, 4 x (3' hard / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up: 10' easy jog",
+            "Intervals: 4 x (3' comfortably hard / 2' easy jog)",
+            "Cool-down: 10' easy jog"
+          ],
+          "id": "s_2026-11-26_c"
+        },
+        {
+          "date": "2026-11-27",
+          "week": 4,
+          "type": "UB",
+          "title": "UB (3-4 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper B: 3-4 sets"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-11-27_c"
+        },
+        {
+          "date": "2026-11-28",
+          "week": 4,
+          "type": "LONG",
+          "title": "LONG 7 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 7.0,
+          "details": [
+            "7 km long run, conversational pace, practice run/walk"
+          ],
+          "id": "s_2026-11-28_c"
+        },
+        {
+          "date": "2026-11-29",
+          "week": 4,
+          "type": "MOB",
+          "title": "UC optional / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility routine or light skill work"
+          ],
+          "id": "s_2026-11-29_c"
+        },
+        {
+          "date": "2026-11-30",
+          "week": 5,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Full rest day before finals week."
+          ],
+          "id": "s_2026-11-30_c"
+        },
+        {
+          "date": "2026-12-01",
+          "week": 5,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog"
+          ],
+          "id": "s_2026-12-01_c"
+        },
+        {
+          "date": "2026-12-02",
+          "week": 5,
+          "type": "FINALS_MINI",
+          "title": "Finals Mini (20 min) + LEG-A (2 sets, 10 min)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 30,
+          "details": [
+            "Finals Mini: 3 rounds (pull-ups, push-ups, hollow hold)",
+            "Leg A: 2 sets (10 min)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "push_ups",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-02_c"
+        },
+        {
+          "date": "2026-12-03",
+          "week": 5,
+          "type": "REST",
+          "title": "REST: Civics final",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Civics final exam day. Rest."
+          ],
+          "id": "s_2026-12-03_c"
+        },
+        {
+          "date": "2026-12-04",
+          "week": 5,
+          "type": "EASY",
+          "title": "EASY 25' + 4 x 20\" strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 28,
+          "details": [
+            "25 min easy jog",
+            "4 x 20 sec relaxed fast strides with 45s walk recoveries"
+          ],
+          "id": "s_2026-12-04_c"
+        },
+        {
+          "date": "2026-12-05",
+          "week": 5,
+          "type": "MOB",
+          "title": "REST / MOB: Ethics exam",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Ethics exam day. Light stretching or complete rest."
+          ],
+          "id": "s_2026-12-05_c"
+        },
+        {
+          "date": "2026-12-06",
+          "week": 5,
+          "type": "LONG",
+          "title": "LONG 8 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 8.0,
+          "details": [
+            "8 km long run at easy conversational pace"
+          ],
+          "id": "s_2026-12-06_c"
+        },
+        {
+          "date": "2026-12-07",
+          "week": 6,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest and exam prep."
+          ],
+          "id": "s_2026-12-07_c"
+        },
+        {
+          "date": "2026-12-08",
+          "week": 6,
+          "type": "MOB",
+          "title": "MOB 10': DSA exam",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 10,
+          "details": [
+            "DSA exam day. 10 min gentle mobility."
+          ],
+          "id": "s_2026-12-08_c"
+        },
+        {
+          "date": "2026-12-09",
+          "week": 6,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy conversational jog to clear mind."
+          ],
+          "id": "s_2026-12-09_c"
+        },
+        {
+          "date": "2026-12-10",
+          "week": 6,
+          "type": "REST",
+          "title": "REST: PS exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "PS exam day. Rest."
+          ],
+          "id": "s_2026-12-10_c"
+        },
+        {
+          "date": "2026-12-11",
+          "week": 6,
+          "type": "EASY",
+          "title": "EASY 30' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 34,
+          "details": [
+            "30 min easy jog + 4 strides"
+          ],
+          "id": "s_2026-12-11_c"
+        },
+        {
+          "date": "2026-12-12",
+          "week": 6,
+          "type": "REST",
+          "title": "REST: ARW exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "ARW exam day. Rest."
+          ],
+          "id": "s_2026-12-12_c"
+        },
+        {
+          "date": "2026-12-13",
+          "week": 6,
+          "type": "LONG",
+          "title": "LONG 9 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 9.0,
+          "details": [
+            "9 km easy long run with run/walk pattern"
+          ],
+          "id": "s_2026-12-13_c"
+        },
+        {
+          "date": "2026-12-14",
+          "week": 7,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest day."
+          ],
+          "id": "s_2026-12-14_c"
+        },
+        {
+          "date": "2026-12-15",
+          "week": 7,
+          "type": "REST",
+          "title": "REST: LADE exam",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "LADE exam day (finals finish!)."
+          ],
+          "id": "s_2026-12-15_c"
+        },
+        {
+          "date": "2026-12-16",
+          "week": 7,
+          "type": "UA",
+          "title": "UA (light, stop 2 reps before failure) + LEG-A (3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 45,
+          "details": [
+            "Upper A light (no failure, prep for 5k test tomorrow)",
+            "Leg A: 3 sets"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-16_c"
+        },
+        {
+          "date": "2026-12-17",
+          "week": 7,
+          "type": "TEST5K",
+          "title": "5K TEST (controlled, not all-out)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 5.0,
+          "details": [
+            "Warm-up: 10' easy jog + 4 strides",
+            "5 km at comfortably-hard steady effort (~8/10, finish feeling you could do another min)",
+            "Cool-down: 10' walk"
+          ],
+          "id": "s_2026-12-17_c"
+        },
+        {
+          "date": "2026-12-18",
+          "week": 7,
+          "type": "MOB",
+          "title": "REST / MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Post 5k test recovery and mobility."
+          ],
+          "id": "s_2026-12-18_c"
+        },
+        {
+          "date": "2026-12-19",
+          "week": 7,
+          "type": "EASY",
+          "title": "EASY 30'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 30,
+          "details": [
+            "30 min easy recovery run"
+          ],
+          "id": "s_2026-12-19_c"
+        },
+        {
+          "date": "2026-12-20",
+          "week": 7,
+          "type": "LONG",
+          "title": "LONG 10.5 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 10.5,
+          "details": [
+            "10.5 km long run. Test race run/walk pattern (8' run / 1' walk)."
+          ],
+          "id": "s_2026-12-20_c"
+        },
+        {
+          "date": "2026-12-21",
+          "week": 8,
+          "type": "LEG_B",
+          "title": "LEG-B (last one)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Final Leg B session before race build peak"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-12-21_c"
+        },
+        {
+          "date": "2026-12-22",
+          "week": 8,
+          "type": "EASY",
+          "title": "EASY 40'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 40,
+          "details": [
+            "40 min easy aerobic run"
+          ],
+          "id": "s_2026-12-22_c"
+        },
+        {
+          "date": "2026-12-23",
+          "week": 8,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (last one, 2-3 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 55,
+          "details": [
+            "Upper A: 3 sets",
+            "Leg A: 2-3 sets (last heavy leg session)"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-23_c"
+        },
+        {
+          "date": "2026-12-24",
+          "week": 8,
+          "type": "TEMPO",
+          "title": "TEMPO: 10' easy, 2 x 10' tempo (3' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 43,
+          "details": [
+            "Warm-up: 10' easy",
+            "Tempo: 2 x 10' comfortably hard with 3' jog recovery",
+            "Cool-down: 10' easy"
+          ],
+          "id": "s_2026-12-24_c"
+        },
+        {
+          "date": "2026-12-25",
+          "week": 8,
+          "type": "UB",
+          "title": "UB (2-3 sets, light)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Upper B: 2-3 light sets, keep crisp"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2026-12-25_c"
+        },
+        {
+          "date": "2026-12-26",
+          "week": 8,
+          "type": "LONG",
+          "title": "LONG 12 km easy (peak)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 12.0,
+          "details": [
+            "12 km peak long run, test run/walk strategy thoroughly"
+          ],
+          "id": "s_2026-12-26_c"
+        },
+        {
+          "date": "2026-12-27",
+          "week": 8,
+          "type": "MOB",
+          "title": "MOB / optional UC",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 20,
+          "details": [
+            "Mobility or optional light Upper C"
+          ],
+          "id": "s_2026-12-27_c"
+        },
+        {
+          "date": "2026-12-28",
+          "week": 9,
+          "type": "LEG_B",
+          "title": "LEG-B (last one)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Last Leg B session"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2026-12-28_c"
+        },
+        {
+          "date": "2026-12-29",
+          "week": 9,
+          "type": "EASY",
+          "title": "EASY 40'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 40,
+          "details": [
+            "40 min easy run"
+          ],
+          "id": "s_2026-12-29_c"
+        },
+        {
+          "date": "2026-12-30",
+          "week": 9,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (last one, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 50,
+          "details": [
+            "UA 3 sets, Leg A 2 sets"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2026-12-30_c"
+        },
+        {
+          "date": "2026-12-31",
+          "week": 9,
+          "type": "INT",
+          "title": "INT-2: 10' easy, 4 x (3' hard / 2' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 40,
+          "details": [
+            "Warm-up 10', 4 x (3' hard / 2' jog), cool-down 10'"
+          ],
+          "id": "s_2026-12-31_c"
+        },
+        {
+          "date": "2027-01-01",
+          "week": 9,
+          "type": "UB",
+          "title": "UB (2-3 sets, light)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Upper B light"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2027-01-01_c"
+        },
+        {
+          "date": "2027-01-02",
+          "week": 9,
+          "type": "LONG",
+          "title": "LONG 13.5 km easy (peak)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 13.5,
+          "details": [
+            "13.5 km peak long run, test race run/walk pattern"
+          ],
+          "id": "s_2027-01-02_c"
+        },
+        {
+          "date": "2027-01-03",
+          "week": 9,
+          "type": "MOB",
+          "title": "MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Recovery mobility"
+          ],
+          "id": "s_2027-01-03_c"
+        },
+        {
+          "date": "2027-01-04",
+          "week": 10,
+          "type": "LEG_B",
+          "title": "LEG-B (last one)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Last Leg B session"
+          ],
+          "exerciseIds": [
+            "glute_bridge",
+            "calf_raise",
+            "plyo_pogo"
+          ],
+          "id": "s_2027-01-04_c"
+        },
+        {
+          "date": "2027-01-05",
+          "week": 10,
+          "type": "EASY",
+          "title": "EASY 40'",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 40,
+          "details": [
+            "40 min easy run"
+          ],
+          "id": "s_2027-01-05_c"
+        },
+        {
+          "date": "2027-01-06",
+          "week": 10,
+          "type": "UA",
+          "title": "UA (3 sets) + LEG-A (last one, 2 sets)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 50,
+          "details": [
+            "UA 3 sets, Leg A 2 sets"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold",
+            "split_squat",
+            "single_leg_rdl",
+            "calf_raise"
+          ],
+          "id": "s_2027-01-06_c"
+        },
+        {
+          "date": "2027-01-07",
+          "week": 10,
+          "type": "TEMPO",
+          "title": "TEMPO: 10' easy, 2 x 10' tempo (3' jog), 10' easy",
+          "category": "run",
+          "isHard": true,
+          "estimatedMinutes": 43,
+          "details": [
+            "Warm-up 10', 2 x 10' tempo with 3' jog, cool-down 10'"
+          ],
+          "id": "s_2027-01-07_c"
+        },
+        {
+          "date": "2027-01-08",
+          "week": 10,
+          "type": "UB",
+          "title": "UB (2-3 sets, light)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 35,
+          "details": [
+            "Upper B light"
+          ],
+          "exerciseIds": [
+            "push_ups",
+            "pike_push_up",
+            "db_floor_press",
+            "bench_dips",
+            "plank",
+            "superman"
+          ],
+          "id": "s_2027-01-08_c"
+        },
+        {
+          "date": "2027-01-09",
+          "week": 10,
+          "type": "LONG",
+          "title": "LONG 15 km easy (peak)",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 15.0,
+          "details": [
+            "15 km peak long run, test race run/walk pattern"
+          ],
+          "id": "s_2027-01-09_c"
+        },
+        {
+          "date": "2027-01-10",
+          "week": 10,
+          "type": "MOB",
+          "title": "MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Recovery mobility"
+          ],
+          "id": "s_2027-01-10_c"
+        },
+        {
+          "date": "2027-01-11",
+          "week": 11,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Taper week 1 begins"
+          ],
+          "id": "s_2027-01-11_c"
+        },
+        {
+          "date": "2027-01-12",
+          "week": 11,
+          "type": "EASY",
+          "title": "EASY 30' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 34,
+          "details": [
+            "30 min easy jog + 4 strides"
+          ],
+          "id": "s_2027-01-12_c"
+        },
+        {
+          "date": "2027-01-13",
+          "week": 11,
+          "type": "UA",
+          "title": "UA light (2 sets, no failure)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 30,
+          "details": [
+            "UA 2 sets easy"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "rear_delt_fly",
+            "hanging_knee_raise",
+            "hollow_hold"
+          ],
+          "id": "s_2027-01-13_c"
+        },
+        {
+          "date": "2027-01-14",
+          "week": 11,
+          "type": "EASY",
+          "title": "EASY 25' inc. 3 x 1' comfortably hard",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 25,
+          "details": [
+            "25 min easy with 3 x 1' pick-ups"
+          ],
+          "id": "s_2027-01-14_c"
+        },
+        {
+          "date": "2027-01-15",
+          "week": 11,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest day"
+          ],
+          "id": "s_2027-01-15_c"
+        },
+        {
+          "date": "2027-01-16",
+          "week": 11,
+          "type": "LONG",
+          "title": "LONG 8 km easy",
+          "category": "run",
+          "isHard": true,
+          "distanceKm": 8.0,
+          "details": [
+            "8 km easy run (taper week 1)"
+          ],
+          "id": "s_2027-01-16_c"
+        },
+        {
+          "date": "2027-01-17",
+          "week": 11,
+          "type": "MOB",
+          "title": "MOB",
+          "category": "mobility",
+          "isHard": false,
+          "estimatedMinutes": 15,
+          "details": [
+            "Mobility"
+          ],
+          "id": "s_2027-01-17_c"
+        },
+        {
+          "date": "2027-01-18",
+          "week": 12,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Race week taper begins"
+          ],
+          "id": "s_2027-01-18_c"
+        },
+        {
+          "date": "2027-01-19",
+          "week": 12,
+          "type": "EASY",
+          "title": "EASY 25' + 4 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 29,
+          "details": [
+            "25 min easy jog + 4 strides"
+          ],
+          "id": "s_2027-01-19_c"
+        },
+        {
+          "date": "2027-01-20",
+          "week": 12,
+          "type": "UA",
+          "title": "UA very light (2 sets, no failure)",
+          "category": "strength",
+          "isHard": false,
+          "estimatedMinutes": 25,
+          "details": [
+            "Very light Upper A maintenance"
+          ],
+          "exerciseIds": [
+            "pull_ups",
+            "one_arm_db_row",
+            "hanging_knee_raise"
+          ],
+          "id": "s_2027-01-20_c"
+        },
+        {
+          "date": "2027-01-21",
+          "week": 12,
+          "type": "EASY",
+          "title": "EASY 20' inc. 3 x 1' comfortably hard",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 20,
+          "details": [
+            "20 min easy with 3 x 1' surges"
+          ],
+          "id": "s_2027-01-21_c"
+        },
+        {
+          "date": "2027-01-22",
+          "week": 12,
+          "type": "REST",
+          "title": "REST",
+          "category": "rest",
+          "isHard": false,
+          "details": [
+            "Rest & carbo-loading"
+          ],
+          "id": "s_2027-01-22_c"
+        },
+        {
+          "date": "2027-01-23",
+          "week": 12,
+          "type": "SHAKE",
+          "title": "SHAKE: 15' easy + 3 strides",
+          "category": "run",
+          "isHard": false,
+          "durationMinutes": 18,
+          "details": [
+            "Pre-race shakeout: 15' easy + 3 strides"
+          ],
+          "id": "s_2027-01-23_c"
+        },
+        {
+          "date": "2027-01-24",
+          "week": 12,
+          "type": "RACE",
+          "title": "RACE DAY: HALF MARATHON",
+          "category": "race",
+          "isHard": true,
+          "distanceKm": 21.1,
+          "details": [
+            "HALF MARATHON (21.1 km)",
+            "Option C Race Day!"
+          ],
+          "id": "s_2027-01-24_c"
+        }
+      ]
+    }
+  }
+}
