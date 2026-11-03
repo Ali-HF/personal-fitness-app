@@ -64,3 +64,4 @@ class LongRunCapResult {
     this.warningMessage,
   });
 }
+

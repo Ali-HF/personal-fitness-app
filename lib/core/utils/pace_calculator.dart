@@ -43,3 +43,4 @@ class PaceCalculator {
     return int.tryParse(text) ?? 0;
   }
 }
+

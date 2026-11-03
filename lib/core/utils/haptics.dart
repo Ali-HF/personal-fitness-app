@@ -17,3 +17,4 @@ class AppHaptics {
     HapticFeedback.heavyImpact();
   }
 }
+

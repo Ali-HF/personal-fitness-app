@@ -2,7 +2,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fitness_app/data/models/session.dart';
 import 'package:fitness_app/data/models/workout_log.dart';
 import 'package:fitness_app/data/models/readiness_checkin.dart';
-import 'package:fitness_app/data/models/session_change.dart';
 import 'package:fitness_app/data/models/user_settings.dart';
 import 'package:fitness_app/domain/rules/swap_rules.dart';
 import 'package:fitness_app/domain/rules/long_run_cap_rule.dart';

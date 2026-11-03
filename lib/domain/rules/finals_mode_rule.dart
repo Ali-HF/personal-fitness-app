@@ -25,3 +25,4 @@ class FinalsModeRule {
   /// Maximum session duration cap in minutes during finals mode.
   static const int maxSessionDurationMinutes = 30;
 }
+

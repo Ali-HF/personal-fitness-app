@@ -27,3 +27,4 @@ class AppColors {
   static const Color statusWarning = Color(0xFFE08A28);
   static const Color statusInfo = Color(0xFF3880C8);
 }
+

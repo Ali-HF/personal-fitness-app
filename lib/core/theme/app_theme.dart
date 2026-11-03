@@ -52,7 +52,7 @@ class AppTheme {
           systemNavigationBarColor: AppColors.lightBackground,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: AppColors.lightSurface,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -105,8 +105,8 @@ class AppTheme {
           borderRadius: BorderRadius.circular(16),
           borderSide: const BorderSide(color: AppColors.lightPrimary, width: 2),
         ),
-        labelStyle: textTheme.bodyMedium?.copyWith(color: AppColors.lightTextSecondary),
-        hintStyle: textTheme.bodyMedium?.copyWith(color: AppColors.lightTextSecondary.withOpacity(0.7)),
+        labelStyle: textTheme.bodyMedium?.copyWith(color: AppColors.darkTextSecondary),
+        hintStyle: textTheme.bodyMedium?.copyWith(color: AppColors.darkTextSecondary),
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColors.lightSurface,
@@ -171,7 +171,7 @@ class AppTheme {
           systemNavigationBarColor: AppColors.darkBackground,
         ),
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: AppColors.darkSurface,
         elevation: 0,
         shape: RoundedRectangleBorder(
@@ -225,7 +225,7 @@ class AppTheme {
           borderSide: const BorderSide(color: AppColors.darkPrimary, width: 2),
         ),
         labelStyle: textTheme.bodyMedium?.copyWith(color: AppColors.darkTextSecondary),
-        hintStyle: textTheme.bodyMedium?.copyWith(color: AppColors.darkTextSecondary.withOpacity(0.7)),
+        hintStyle: textTheme.bodyMedium?.copyWith(color: AppColors.darkTextSecondary),
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         backgroundColor: AppColors.darkSurface,
