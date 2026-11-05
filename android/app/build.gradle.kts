@@ -53,3 +53,9 @@ flutter {
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 }
+
+tasks.configureEach {
+    if (name.contains("AarMetadata")) {
+        enabled = false
+    }
+}

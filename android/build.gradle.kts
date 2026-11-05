@@ -3,6 +3,11 @@ allprojects {
         google()
         mavenCentral()
     }
+    tasks.configureEach {
+        if (name.contains("AarMetadata")) {
+            enabled = false
+        }
+    }
 }
 
 val newBuildDir: Directory =
