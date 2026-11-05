@@ -417,7 +417,7 @@ class _TodayScreenState extends ConsumerState<TodayScreen> {
                 raceDateStr: settings.raceDate,
               ),
 
-              const SizedBox(height: 24),
+              const SizedBox(height: 60),
             ],
           ),
         ),

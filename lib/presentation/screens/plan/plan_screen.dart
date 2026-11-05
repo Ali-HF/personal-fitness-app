@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
 import '../../../core/theme/app_colors.dart';
+import '../../../core/utils/haptics.dart';
 import '../../../data/models/session.dart';
 import '../../../domain/rules/plan_adjuster.dart';
 import '../../providers/plan_provider.dart';
@@ -121,7 +122,10 @@ class _PlanScreenState extends ConsumerState<PlanScreen> {
                       color: isSelected ? AppColors.lightOnPrimary : theme.textTheme.bodyMedium?.color,
                     ),
                     onSelected: (val) {
-                      if (val) setState(() => _selectedWeek = weekNum);
+                      if (val) {
+                        AppHaptics.selection();
+                        setState(() => _selectedWeek = weekNum);
+                      }
                     },
                   );
                 },

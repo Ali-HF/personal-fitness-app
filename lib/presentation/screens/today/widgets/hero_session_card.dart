@@ -4,6 +4,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/haptics.dart';
 import '../../../../data/datasources/plan_repository.dart';
 import '../../../../data/models/session.dart';
+import '../../../../data/models/exercise.dart';
 import '../../../../data/models/workout_log.dart';
 import '../../../../data/models/session_change.dart';
 
@@ -225,24 +226,49 @@ class HeroSessionCard extends StatelessWidget {
                               // Secondary Swap button
                               Expanded(
                                 flex: 2,
-                                child: OutlinedButton(
+                                child: OutlinedButton.icon(
+                                  style: OutlinedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(vertical: 14),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                    side: BorderSide(color: theme.dividerColor, width: 1.5),
+                                  ),
                                   onPressed: () {
                                     AppHaptics.light();
                                     onSwap();
                                   },
-                                  child: const Text('Swap'),
+                                  icon: const Icon(PhosphorIconsBold.arrowsLeftRight, size: 16),
+                                  label: const Text('Swap'),
                                 ),
                               ),
                               const SizedBox(width: 12),
                               // Big Yellow Start Button (56px high)
                               Expanded(
                                 flex: 3,
-                                child: ElevatedButton(
+                                child: ElevatedButton.icon(
+                                  style: ElevatedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(vertical: 14),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                    ),
+                                    elevation: 2,
+                                    shadowColor: theme.colorScheme.primary.withOpacity(0.4),
+                                  ),
                                   onPressed: () {
                                     AppHaptics.medium();
                                     onStart();
                                   },
-                                  child: Text(session!.category == 'run' ? 'Log Run' : 'Start Workout'),
+                                  icon: Icon(
+                                    session!.category == 'run'
+                                        ? PhosphorIconsBold.personSimpleRun
+                                        : PhosphorIconsBold.play,
+                                    size: 18,
+                                  ),
+                                  label: Text(
+                                    session!.category == 'run' ? 'Log Run' : 'Start Workout',
+                                    style: const TextStyle(fontWeight: FontWeight.w700),
+                                  ),
                                 ),
                               ),
                             ],
@@ -256,52 +282,86 @@ class HeroSessionCard extends StatelessWidget {
   List<Widget> _buildPreviewLines(ThemeData theme) {
     if (session!.exerciseIds.isNotEmpty) {
       final repo = PlanRepository.instance;
-      final previewNames = session!.exerciseIds
+      final previewExercises = session!.exerciseIds
           .take(3)
-          .map((id) => repo.getExercise(id)?.name ?? id)
+          .map((id) => repo.getExercise(id))
+          .whereType<Exercise>()
           .toList();
-      return previewNames.map((name) {
+
+      return previewExercises.asMap().entries.map((entry) {
+        final idx = entry.key + 1;
+        final ex = entry.value;
+
         return Padding(
-          padding: const EdgeInsets.only(bottom: 4),
+          padding: const EdgeInsets.only(bottom: 8),
           child: Row(
             children: [
               Container(
-                width: 5,
-                height: 5,
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.primary,
-                  shape: BoxShape.circle,
+                  color: theme.colorScheme.surfaceContainerHighest,
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Text(
+                  '0$idx',
+                  style: theme.textTheme.labelSmall?.copyWith(
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.5,
+                  ),
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 10),
               Expanded(
-                child: Text(name, style: theme.textTheme.bodyMedium),
+                child: Text(
+                  ex.name,
+                  style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                ),
+              ),
+              Text(
+                ex.target,
+                style: theme.textTheme.bodySmall?.copyWith(fontSize: 12),
               ),
             ],
           ),
         );
       }).toList();
     } else {
-      return session!.details.take(3).map((detail) {
+      return session!.details.take(3).toList().asMap().entries.map((entry) {
+        final idx = entry.key + 1;
+        final detail = entry.value;
+
+        // Try extracting phase name if formatted like "Warm-up: 5' walk"
+        final parts = detail.split(':');
+        final hasPrefix = parts.length > 1;
+        final tag = hasPrefix ? parts[0].trim().toUpperCase() : 'STEP 0$idx';
+        final text = hasPrefix ? parts.sublist(1).join(':').trim() : detail;
+
         return Padding(
-          padding: const EdgeInsets.only(bottom: 4),
+          padding: const EdgeInsets.only(bottom: 8),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 6),
-                child: Container(
-                  width: 5,
-                  height: 5,
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.primary,
-                    shape: BoxShape.circle,
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                decoration: BoxDecoration(
+                  color: theme.colorScheme.primary.withOpacity(0.15),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Text(
+                  tag,
+                  style: theme.textTheme.labelSmall?.copyWith(
+                    fontWeight: FontWeight.w800,
+                    color: theme.colorScheme.onSurface,
+                    letterSpacing: 0.5,
                   ),
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 10),
               Expanded(
-                child: Text(detail, style: theme.textTheme.bodyMedium),
+                child: Text(
+                  text,
+                  style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w500),
+                ),
               ),
             ],
           ),

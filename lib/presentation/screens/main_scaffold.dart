@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
+import '../../core/utils/haptics.dart';
 import 'today/today_screen.dart';
 import 'plan/plan_screen.dart';
 import 'progress/progress_screen.dart';
@@ -43,10 +44,20 @@ class _MainScaffoldState extends State<MainScaffold> {
         ),
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
+          elevation: 0,
+          backgroundColor: theme.colorScheme.surface,
+          selectedItemColor: theme.colorScheme.primary,
+          unselectedItemColor: theme.textTheme.bodySmall?.color,
+          selectedLabelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12),
+          unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 11),
+          type: BottomNavigationBarType.fixed,
           onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
+            if (_currentIndex != index) {
+              AppHaptics.selection();
+              setState(() {
+                _currentIndex = index;
+              });
+            }
           },
           items: const [
             BottomNavigationBarItem(

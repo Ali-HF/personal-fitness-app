@@ -188,8 +188,27 @@ class ProgressScreen extends ConsumerWidget {
                         ],
                         isCurved: true,
                         color: theme.colorScheme.primary,
-                        barWidth: 3,
-                        dotData: const FlDotData(show: true),
+                        barWidth: 3.5,
+                        dotData: FlDotData(
+                          show: true,
+                          getDotPainter: (spot, percent, barData, index) => FlDotCirclePainter(
+                            radius: 4,
+                            color: theme.colorScheme.primary,
+                            strokeWidth: 2,
+                            strokeColor: theme.colorScheme.surface,
+                          ),
+                        ),
+                        belowBarData: BarAreaData(
+                          show: true,
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: [
+                              theme.colorScheme.primary.withOpacity(0.35),
+                              theme.colorScheme.primary.withOpacity(0.0),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),

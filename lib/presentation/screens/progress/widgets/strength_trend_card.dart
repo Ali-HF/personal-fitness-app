@@ -125,14 +125,52 @@ class StrengthTrendCard extends StatelessWidget {
                     isCurved: true,
                     color: theme.colorScheme.primary,
                     barWidth: 3,
-                    dotData: const FlDotData(show: true),
+                    dotData: FlDotData(
+                      show: true,
+                      getDotPainter: (spot, percent, barData, index) => FlDotCirclePainter(
+                        radius: 3.5,
+                        color: theme.colorScheme.primary,
+                        strokeWidth: 1.5,
+                        strokeColor: theme.colorScheme.surface,
+                      ),
+                    ),
+                    belowBarData: BarAreaData(
+                      show: true,
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          theme.colorScheme.primary.withOpacity(0.25),
+                          theme.colorScheme.primary.withOpacity(0.0),
+                        ],
+                      ),
+                    ),
                   ),
                   LineChartBarData(
                     spots: pushUpSpots,
                     isCurved: true,
                     color: AppColors.statusDone,
                     barWidth: 3,
-                    dotData: const FlDotData(show: true),
+                    dotData: FlDotData(
+                      show: true,
+                      getDotPainter: (spot, percent, barData, index) => FlDotCirclePainter(
+                        radius: 3.5,
+                        color: AppColors.statusDone,
+                        strokeWidth: 1.5,
+                        strokeColor: theme.colorScheme.surface,
+                      ),
+                    ),
+                    belowBarData: BarAreaData(
+                      show: true,
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          AppColors.statusDone.withOpacity(0.25),
+                          AppColors.statusDone.withOpacity(0.0),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),

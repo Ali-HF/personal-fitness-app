@@ -24,7 +24,7 @@ class SettingsScreen extends ConsumerWidget {
       ),
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 60),
           children: [
             // Plan Variant Selector Card
             _buildSectionHeader(theme, 'Training Plan Variant'),

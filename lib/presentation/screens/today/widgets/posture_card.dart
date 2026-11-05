@@ -41,21 +41,33 @@ class PostureCard extends StatelessWidget {
               AppHaptics.medium();
               onToggle(!isDone);
             },
-            borderRadius: BorderRadius.circular(12),
-            child: Container(
-              width: 36,
-              height: 36,
+            borderRadius: BorderRadius.circular(22),
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              width: 44,
+              height: 44,
               decoration: BoxDecoration(
                 color: isDone ? AppColors.statusDone : Colors.transparent,
-                borderRadius: BorderRadius.circular(10),
+                shape: BoxShape.circle,
                 border: Border.all(
                   color: isDone ? AppColors.statusDone : theme.dividerColor,
                   width: 2,
                 ),
+                boxShadow: isDone
+                    ? [
+                        BoxShadow(
+                          color: AppColors.statusDone.withOpacity(0.3),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ]
+                    : null,
               ),
-              child: isDone
-                  ? const Icon(PhosphorIconsBold.check, color: Colors.white, size: 20)
-                  : null,
+              child: Icon(
+                PhosphorIconsBold.check,
+                color: isDone ? Colors.white : theme.dividerColor.withOpacity(0.4),
+                size: 20,
+              ),
             ),
           ),
           const SizedBox(width: 14),

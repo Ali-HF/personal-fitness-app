@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:phosphoricons_flutter/phosphoricons_flutter.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/utils/date_formatters.dart';
+import '../../../../core/utils/haptics.dart';
 import '../../../../data/models/session.dart';
 import '../../../../data/models/workout_log.dart';
 import '../../../../data/models/session_change.dart';
@@ -34,7 +36,7 @@ class WeekStrip extends StatelessWidget {
     final dayLabels = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
         borderRadius: BorderRadius.circular(20),
@@ -54,25 +56,66 @@ class WeekStrip extends StatelessWidget {
           final isSkipped = change?.isSkipped == true;
           final isRest = session?.type == 'REST';
 
-          // Status indicator color
-          Color dotColor;
+          // Status indicator widget
+          Widget statusIndicator;
           if (hasLog) {
-            dotColor = AppColors.statusDone; // Green
+            statusIndicator = Container(
+              width: 16,
+              height: 16,
+              decoration: const BoxDecoration(
+                color: AppColors.statusDone,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(PhosphorIconsBold.check, size: 10, color: Colors.white),
+            );
           } else if (isSkipped) {
-            dotColor = AppColors.statusHard; // Orange/red
+            statusIndicator = Container(
+              width: 16,
+              height: 16,
+              decoration: const BoxDecoration(
+                color: AppColors.statusHard,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(PhosphorIconsBold.x, size: 10, color: Colors.white),
+            );
           } else if (isRest) {
-            dotColor = isDark ? AppColors.darkTextSecondary.withOpacity(0.4) : AppColors.lightDivider;
+            statusIndicator = Icon(
+              PhosphorIconsRegular.moon,
+              size: 13,
+              color: isDark ? AppColors.darkTextSecondary.withOpacity(0.5) : AppColors.lightDivider,
+            );
           } else if (session != null) {
-            dotColor = theme.colorScheme.primary; // Yellow
+            statusIndicator = Container(
+              width: 12,
+              height: 12,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: theme.colorScheme.primary, width: 2),
+              ),
+              child: Center(
+                child: Container(
+                  width: 4,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.primary,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ),
+            );
           } else {
-            dotColor = Colors.transparent;
+            statusIndicator = const SizedBox(width: 16, height: 16);
           }
 
           return InkWell(
-            onTap: () => onSelectDate(day),
+            onTap: () {
+              AppHaptics.selection();
+              onSelectDate(day);
+            },
             borderRadius: BorderRadius.circular(16),
-            child: Container(
-              width: 42,
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 180),
+              width: 44,
               padding: const EdgeInsets.symmetric(vertical: 8),
               decoration: BoxDecoration(
                 color: isSelected
@@ -81,33 +124,33 @@ class WeekStrip extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
                 border: isToday
                     ? Border.all(color: theme.colorScheme.primary, width: 2)
-                    : null,
+                    : isSelected
+                        ? Border.all(color: theme.dividerColor, width: 1)
+                        : null,
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                     dayLabels[index],
-                    style: theme.textTheme.labelMedium?.copyWith(
-                      fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                      color: isSelected ? theme.colorScheme.onSurface : theme.textTheme.bodySmall?.color,
+                    style: theme.textTheme.labelSmall?.copyWith(
+                      fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+                      color: isSelected
+                          ? theme.colorScheme.onSurface
+                          : theme.textTheme.bodySmall?.color,
                     ),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     day.day.toString(),
                     style: theme.textTheme.titleSmall?.copyWith(
-                      fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+                      fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
                     ),
                   ),
                   const SizedBox(height: 6),
-                  Container(
-                    width: 6,
-                    height: 6,
-                    decoration: BoxDecoration(
-                      color: dotColor,
-                      shape: BoxShape.circle,
-                    ),
+                  SizedBox(
+                    height: 16,
+                    child: Center(child: statusIndicator),
                   ),
                 ],
               ),
