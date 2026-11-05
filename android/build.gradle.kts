@@ -3,11 +3,6 @@ allprojects {
         google()
         mavenCentral()
     }
-    tasks.configureEach {
-        if (name.contains("AarMetadata")) {
-            enabled = false
-        }
-    }
 }
 
 val newBuildDir: Directory =
@@ -25,9 +20,16 @@ subprojects {
 }
 
 subprojects {
-    plugins.withId("com.android.library") {
+    val configureAndroid: () -> Unit = {
         val android = extensions.findByName("android") as? com.android.build.gradle.BaseExtension
         android?.compileSdkVersion(36)
+    }
+    if (state.executed) {
+        configureAndroid()
+    } else {
+        afterEvaluate {
+            configureAndroid()
+        }
     }
 }
 
