@@ -30,7 +30,6 @@ class SettingsScreen extends ConsumerWidget {
             _buildSectionHeader(theme, 'Training Plan Variant'),
             Material(
               color: theme.colorScheme.surface,
-              borderRadius: BorderRadius.circular(20),
               clipBehavior: Clip.antiAlias,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -92,7 +91,6 @@ class SettingsScreen extends ConsumerWidget {
             _buildSectionHeader(theme, 'Target Dates'),
             Material(
               color: theme.colorScheme.surface,
-              borderRadius: BorderRadius.circular(20),
               clipBehavior: Clip.antiAlias,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
@@ -181,7 +179,6 @@ class SettingsScreen extends ConsumerWidget {
             _buildSectionHeader(theme, 'Export & Reminders'),
             Material(
               color: theme.colorScheme.surface,
-              borderRadius: BorderRadius.circular(20),
               clipBehavior: Clip.antiAlias,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
