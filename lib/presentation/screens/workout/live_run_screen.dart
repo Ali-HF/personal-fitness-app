@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -12,6 +13,13 @@ import '../../../core/theme/app_colors.dart';
 import '../../../data/models/session.dart';
 import '../../../domain/models/run_interval.dart';
 import 'workout_finish_screen.dart';
+
+enum GpsLockStatus {
+  searching,
+  locked,
+  disabled,
+  denied,
+}
 
 class LiveRunScreen extends ConsumerStatefulWidget {
   final PlannedSession session;
@@ -35,6 +43,9 @@ class _LiveRunScreenState extends ConsumerState<LiveRunScreen> with SingleTicker
   StreamSubscription<Position>? _positionStream;
   final List<LatLng> _routePoints = [];
   Position? _lastPosition;
+  double? _instantSpeedMps;
+  GpsLockStatus _gpsStatus = GpsLockStatus.searching;
+  double? _gpsAccuracyMeters;
   final MapController _mapController = MapController();
   bool _showMap = true;
 
@@ -100,10 +111,19 @@ class _LiveRunScreenState extends ConsumerState<LiveRunScreen> with SingleTicker
   void _advanceToNextPhase() {
     if (_currentPhaseIndex < _intervalPlan.phases.length - 1) {
       _currentPhaseIndex++;
-      _currentPhaseRemainingSeconds = _intervalPlan.phases[_currentPhaseIndex].durationSeconds;
+      final nextPhase = _intervalPlan.phases[_currentPhaseIndex];
+      _currentPhaseRemainingSeconds = nextPhase.durationSeconds;
 
-      // Audio/haptic cue
-      HapticFeedback.heavyImpact();
+      // Specialized vibration & sound cues for runners
+      if (nextPhase.isRun) {
+        // 3 energetic vibration pulses for RUN intervals
+        HapticFeedback.heavyImpact();
+        Future.delayed(const Duration(milliseconds: 250), () => HapticFeedback.heavyImpact());
+        Future.delayed(const Duration(milliseconds: 500), () => HapticFeedback.heavyImpact());
+      } else {
+        // 1 long continuous vibration for WALK / RECOVERY
+        HapticFeedback.vibrate();
+      }
       SystemSound.play(SystemSoundType.alert);
     }
   }
@@ -112,6 +132,7 @@ class _LiveRunScreenState extends ConsumerState<LiveRunScreen> with SingleTicker
     try {
       bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
+        if (mounted) setState(() => _gpsStatus = GpsLockStatus.disabled);
         _startSimulationFallback();
         return;
       }
@@ -120,33 +141,89 @@ class _LiveRunScreenState extends ConsumerState<LiveRunScreen> with SingleTicker
       if (permission == LocationPermission.denied) {
         permission = await Geolocator.requestPermission();
         if (permission == LocationPermission.denied) {
+          if (mounted) setState(() => _gpsStatus = GpsLockStatus.denied);
           _startSimulationFallback();
           return;
         }
       }
 
       if (permission == LocationPermission.deniedForever) {
+        if (mounted) setState(() => _gpsStatus = GpsLockStatus.denied);
         _startSimulationFallback();
         return;
       }
 
-      final initialPos = await Geolocator.getCurrentPosition();
-      final initialLatLng = LatLng(initialPos.latitude, initialPos.longitude);
-      if (mounted) {
-        setState(() {
-          _lastPosition = initialPos;
-          _routePoints.add(initialLatLng);
-        });
+      // Initial fast fix
+      try {
+        final initialPos = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high,
+          timeLimit: const Duration(seconds: 4),
+        );
+        final initialLatLng = LatLng(initialPos.latitude, initialPos.longitude);
+        if (mounted) {
+          setState(() {
+            _lastPosition = initialPos;
+            _gpsAccuracyMeters = initialPos.accuracy;
+            _gpsStatus = initialPos.accuracy <= 30.0 ? GpsLockStatus.locked : GpsLockStatus.searching;
+            _routePoints.add(initialLatLng);
+          });
+        }
+      } catch (_) {
+        // Timeout on fast fix; stream will take over
       }
 
-      const locationSettings = LocationSettings(
-        accuracy: LocationAccuracy.bestForNavigation,
-        distanceFilter: 3,
-      );
+      // Configure location settings with Android background foreground service
+      late final LocationSettings locationSettings;
+      if (defaultTargetPlatform == TargetPlatform.android) {
+        locationSettings = AndroidSettings(
+          accuracy: LocationAccuracy.bestForNavigation,
+          distanceFilter: 2,
+          forceLocationManager: false,
+          intervalDuration: const Duration(seconds: 1),
+          foregroundNotificationConfig: const ForegroundNotificationConfig(
+            notificationTitle: "Ali Fitness • Running",
+            notificationText: "GPS route and pace tracking active",
+            enableWakeLock: true,
+          ),
+        );
+      } else if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.macOS) {
+        locationSettings = AppleSettings(
+          accuracy: LocationAccuracy.bestForNavigation,
+          activityType: ActivityType.fitness,
+          distanceFilter: 2,
+          pauseLocationUpdatesAutomatically: false,
+          showBackgroundLocationIndicator: true,
+        );
+      } else {
+        locationSettings = const LocationSettings(
+          accuracy: LocationAccuracy.high,
+          distanceFilter: 2,
+        );
+      }
 
       _positionStream = Geolocator.getPositionStream(locationSettings: locationSettings).listen(
         (position) {
           if (_isPaused || !mounted) return;
+
+          // Reject inaccurate readings (> 35m) to avoid false distance jumps
+          if (position.accuracy > 35.0) {
+            if (_gpsStatus != GpsLockStatus.searching) {
+              setState(() {
+                _gpsStatus = GpsLockStatus.searching;
+                _gpsAccuracyMeters = position.accuracy;
+              });
+            }
+            return;
+          }
+
+          if (_gpsStatus != GpsLockStatus.locked) {
+            setState(() {
+              _gpsStatus = GpsLockStatus.locked;
+              _gpsAccuracyMeters = position.accuracy;
+            });
+          }
+
+          final latLng = LatLng(position.latitude, position.longitude);
 
           if (_lastPosition != null) {
             final distanceDelta = Geolocator.distanceBetween(
@@ -156,20 +233,29 @@ class _LiveRunScreenState extends ConsumerState<LiveRunScreen> with SingleTicker
               position.longitude,
             );
 
-            // Filter out GPS jump anomalies (> 15 m/s or ~54 km/h)
-            if (distanceDelta > 0.5 && distanceDelta < 60) {
+            final timeDeltaSec = position.timestamp.difference(_lastPosition!.timestamp).inMilliseconds / 1000.0;
+            final isSpeedFeasible = timeDeltaSec <= 0 || (distanceDelta / timeDeltaSec) < 12.0;
+
+            // Only accumulate distance if actual movement >= 1.5m and velocity < 43 km/h
+            if (distanceDelta >= 1.5 && isSpeedFeasible) {
               setState(() {
                 _totalDistanceMeters += distanceDelta;
-                final latLng = LatLng(position.latitude, position.longitude);
+                _instantSpeedMps = position.speed >= 0.5
+                    ? position.speed
+                    : (timeDeltaSec > 0 ? (distanceDelta / timeDeltaSec) : null);
+                _gpsAccuracyMeters = position.accuracy;
                 _routePoints.add(latLng);
                 _lastPosition = position;
               });
-              _mapController.move(LatLng(position.latitude, position.longitude), 16.5);
+              try {
+                _mapController.move(latLng, 16.5);
+              } catch (_) {}
             }
           } else {
             setState(() {
               _lastPosition = position;
-              _routePoints.add(LatLng(position.latitude, position.longitude));
+              _gpsAccuracyMeters = position.accuracy;
+              _routePoints.add(latLng);
             });
           }
         },
@@ -249,12 +335,86 @@ class _LiveRunScreenState extends ConsumerState<LiveRunScreen> with SingleTicker
   }
 
   String _calculatePaceString() {
+    // If running with accurate speed fix, show instant running pace
+    if (!_isPaused && _instantSpeedMps != null && _instantSpeedMps! >= 0.8) {
+      final instantSecPerKm = (1000.0 / _instantSpeedMps!).round();
+      if (instantSecPerKm >= 140 && instantSecPerKm <= 900) {
+        final m = instantSecPerKm ~/ 60;
+        final s = instantSecPerKm % 60;
+        return "$m'${s.toString().padLeft(2, '0')}\"";
+      }
+    }
+
+    // Fallback to overall average pace
+    return _calculateAvgPaceString();
+  }
+
+  String _calculateAvgPaceString() {
     final km = _totalDistanceMeters / 1000.0;
     if (km < 0.05 || _totalElapsedSeconds < 5) return "--'--\"";
     final secPerKm = (_totalElapsedSeconds / km).round();
     final m = secPerKm ~/ 60;
     final s = secPerKm % 60;
     return "$m'${s.toString().padLeft(2, '0')}\"";
+  }
+
+  Widget _buildGpsStatusBadge(ThemeData theme) {
+    Color badgeColor;
+    String label;
+    IconData icon;
+
+    switch (_gpsStatus) {
+      case GpsLockStatus.locked:
+        badgeColor = AppColors.statusDone;
+        label = _gpsAccuracyMeters != null ? 'GPS ±${_gpsAccuracyMeters!.round()}m' : 'GPS Lock';
+        icon = PhosphorIconsFill.navigationArrow;
+        break;
+      case GpsLockStatus.searching:
+        badgeColor = theme.colorScheme.primary;
+        label = 'Acquiring GPS...';
+        icon = PhosphorIconsBold.broadcast;
+        break;
+      case GpsLockStatus.disabled:
+        badgeColor = AppColors.statusHard;
+        label = 'GPS Off';
+        icon = PhosphorIconsBold.warningCircle;
+        break;
+      case GpsLockStatus.denied:
+        badgeColor = AppColors.statusHard;
+        label = 'Permission Denied';
+        icon = PhosphorIconsBold.warningCircle;
+        break;
+    }
+
+    return InkWell(
+      onTap: (_gpsStatus == GpsLockStatus.disabled || _gpsStatus == GpsLockStatus.denied)
+          ? () => Geolocator.openLocationSettings()
+          : null,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        decoration: BoxDecoration(
+          color: badgeColor.withOpacity(0.12),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: badgeColor.withOpacity(0.35)),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 13, color: badgeColor),
+            const SizedBox(width: 4),
+            Text(
+              label,
+              style: theme.textTheme.labelSmall?.copyWith(
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+                color: badgeColor,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   @override
@@ -317,6 +477,8 @@ class _LiveRunScreenState extends ConsumerState<LiveRunScreen> with SingleTicker
                       ],
                     ),
                   ),
+                  _buildGpsStatusBadge(theme),
+                  const SizedBox(width: 4),
                   IconButton(
                     tooltip: 'Toggle Map',
                     icon: Icon(
