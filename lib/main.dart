@@ -11,9 +11,23 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Initialize local SQLite database and load plan data
-  await DatabaseHelper.instance.database;
-  await PlanRepository.instance.load();
-  await NotificationService.instance.init();
+  try {
+    await DatabaseHelper.instance.database;
+  } catch (e) {
+    debugPrint('Database init error: $e');
+  }
+
+  try {
+    await PlanRepository.instance.load();
+  } catch (e) {
+    debugPrint('Plan repository load error: $e');
+  }
+
+  try {
+    await NotificationService.instance.init();
+  } catch (e) {
+    debugPrint('Notification init error: $e');
+  }
 
   runApp(
     const ProviderScope(

@@ -24,7 +24,7 @@ class DatabaseHelper {
 
   Future<Database> _initDB(String filePath) async {
     if (kIsWeb) {
-      databaseFactory = databaseFactoryFfiWeb;
+      databaseFactory = databaseFactoryFfiWebNoWebWorker;
       return await databaseFactory.openDatabase(
         filePath,
         options: OpenDatabaseOptions(
